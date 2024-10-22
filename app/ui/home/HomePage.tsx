@@ -36,7 +36,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className=" max-w-3xl mx-auto space-y-2">
+    <div className="w-3/4 md:max-w-3xl mx-auto space-y-2">
       <Image
         src={gymMainImage}
         alt="immagine della palestra"
@@ -46,24 +46,24 @@ export default function HomePage() {
       {accordionData.map((item, index) => (
         <div
           key={index}
-          className="border border-gray-200 rounded-lg overflow-hidden"
+          className="border border-[var(--tertiary-color)] rounded-lg overflow-hidden"
         >
           <button
-            className="flex justify-between items-center w-full p-4 text-left bg-white hover:bg-gray-50 focus:outline-none"
+            className="flex justify-between items-center w-full p-4 text-left hover:bg-gray-50 focus:outline-none"
             onClick={() => toggleItem(index)}
             aria-expanded={openItems.includes(index)}
           >
-            <span className="flex items-center justify-center w-6 h-6 rounded-full border border-gray-300">
+            <span className="flex items-center justify-center w-6 h-6 rounded-full border border-[var(--tertiary-color)]">
               {openItems.includes(index) ? (
                 <Minus size={16} />
               ) : (
                 <Plus size={16} />
               )}
             </span>
-            <span className="m-4 font-medium w-full">{item.title}</span>
+            <span className="m-4 font-medium w-full ">{item.title}</span>
           </button>
           {openItems.includes(index) && (
-            <div className="p-4 bg-white border-t border-gray-200">
+            <div className="p-4 border-t border-[var(--tertiary-color)]">
               <p>{item.content}</p>
             </div>
           )}
