@@ -1,41 +1,21 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import useToggle from "@/components/hooks/useToggle";
 import { Menu, X } from "lucide-react";
 
-import englishFlag from "@/components/public/united-kingdom.png";
-import italianFlag from "@/components/public/italy.png";
 import Logo from "./logo/Logo";
+import LanguageFlags from "./language-flags/LanguageFlags";
+import NavLinks from "./navlinks/NavLinks";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen((prevState) => !prevState);
-  };
-
+  const { isOpen, toggleMenu } = useToggle();
   return (
     <nav className="p-4 relative">
       <div className="container mx-auto flex justify-between items-center">
         <Logo />
         {/* Centered flags for both mobile and desktop */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-4">
-          <Image
-            src={italianFlag}
-            alt="italian flag language"
-            width={32}
-            height={32}
-          />
-          <Image
-            src={englishFlag}
-            alt="english flag language"
-            width={32}
-            height={32}
-          />
-        </div>
-
+        <LanguageFlags />
         {/* Toggle button for mobile menu */}
         <div className="md:hidden">
           <button
@@ -70,26 +50,7 @@ export default function Navbar() {
           isOpen ? "top-full opacity-100" : "top-[-200%] opacity-0"
         } md:hidden`}
       >
-        <ul className="space-y-4">
-          <li>
-            <Link
-              href="/structure"
-              className="block hover:text-accent transition-colors duration-200"
-              onClick={toggleMenu}
-            >
-              Struttura
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/contacts"
-              className="block hover:text-accent transition-colors duration-200"
-              onClick={toggleMenu}
-            >
-              Contatti
-            </Link>
-          </li>
-        </ul>
+        <NavLinks />
       </div>
     </nav>
   );
