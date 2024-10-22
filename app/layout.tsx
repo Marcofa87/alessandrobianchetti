@@ -15,11 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} antialiased`}>
+      <body className={`${roboto.className} antialiased `}>
         <nav className="border-slate-600">
           <Navbar />
         </nav>
-        <main>{children} </main>
+        <main className="mt-12">{children}</main>
       </body>
     </html>
   );

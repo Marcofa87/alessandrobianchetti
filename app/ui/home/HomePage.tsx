@@ -47,7 +47,6 @@ export default function HomePage() {
             onClick={() => toggleItem(index)}
             aria-expanded={openItems.includes(index)}
           >
-            <span className="font-medium">{item.title}</span>
             <span className="flex items-center justify-center w-6 h-6 rounded-full border border-gray-300">
               {openItems.includes(index) ? (
                 <Minus size={16} />
@@ -55,6 +54,7 @@ export default function HomePage() {
                 <Plus size={16} />
               )}
             </span>
+            <span className=" m-4 font-medium w-full">{item.title}</span>
           </button>
           {openItems.includes(index) && (
             <div className="p-4 bg-white border-t border-gray-200">
