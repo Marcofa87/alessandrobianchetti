@@ -1,12 +1,13 @@
 "use client";
 
-import Link from "next/link";
 import useToggle from "@/components/hooks/useToggle";
 import { Menu, X } from "lucide-react";
 
 import Logo from "./logo/Logo";
 import LanguageFlags from "./language-flags/LanguageFlags";
-import NavLinks from "./navlinks/NavLinks";
+
+import MobileNavLinks from "./navlinks/MobileNavLinks";
+import DesktopNavLinks from "./navlinks/DesktopNavLinks";
 
 export default function Navbar() {
   const { isOpen, toggleMenu } = useToggle();
@@ -29,18 +30,7 @@ export default function Navbar() {
 
         {/* Menu items for larger screens */}
         <div className="hidden md:flex items-center space-x-4">
-          <Link
-            href="/structure"
-            className="hover:text-accent transition-colors duration-200"
-          >
-            Struttura
-          </Link>
-          <Link
-            href="/contacts"
-            className="hover:text-accent transition-colors duration-200"
-          >
-            Contatti
-          </Link>
+          <DesktopNavLinks />
         </div>
       </div>
 
@@ -50,7 +40,7 @@ export default function Navbar() {
           isOpen ? "top-full opacity-100" : "top-[-200%] opacity-0"
         } md:hidden`}
       >
-        <NavLinks />
+        <MobileNavLinks />
       </div>
     </nav>
   );
