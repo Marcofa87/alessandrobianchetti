@@ -16,14 +16,14 @@ export default function Accordion() {
       {accordionData.map((item, index) => (
         <div
           key={index}
-          className="border border-[var(--tertiary-color)] rounded-lg overflow-hidden"
+          className="border border-[var(--color)] rounded-lg overflow-hidden"
         >
           <button
             className="flex justify-between items-center w-full p-4 text-left hover:bg-gray-50 focus:outline-none"
             onClick={() => toggleItem(index)}
             aria-expanded={openItems.includes(index)}
           >
-            <span className="flex items-center justify-center w-6 h-6 rounded-full border border-[var(--tertiary-color)]">
+            <span className="flex items-center justify-center w-6 h-6 ">
               {openItems.includes(index) ? (
                 <Minus size={16} />
               ) : (
