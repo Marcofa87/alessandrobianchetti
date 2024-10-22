@@ -1,11 +1,9 @@
-
+import HomePage from "./ui/home/HomePage";
 
 export default function Home() {
   return (
     <>
-      <h1 className="text-3xl text-center font-bold">
-        Alessandro Bianchetti Ricchione
-      </h1>
+      <HomePage />
     </>
   );
 }
