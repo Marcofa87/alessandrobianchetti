@@ -1,8 +1,8 @@
 "use client";
-
+import Image from "next/image";
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
-
+import gymMainImage from "@/components/public/victor-freitas-WvDYdXDzkhs-unsplash.jpg";
 type AccordionItem = {
   title: string;
   content: string;
@@ -36,7 +36,13 @@ export default function HomePage() {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto space-y-2">
+    <div className=" max-w-3xl mx-auto space-y-2">
+      <Image
+        src={gymMainImage}
+        alt="immagine della palestra"
+        width={400}
+        className="m-auto w-2/3 mb-12"
+      />
       {accordionData.map((item, index) => (
         <div
           key={index}
@@ -54,7 +60,7 @@ export default function HomePage() {
                 <Plus size={16} />
               )}
             </span>
-            <span className=" m-4 font-medium w-full">{item.title}</span>
+            <span className="m-4 font-medium w-full">{item.title}</span>
           </button>
           {openItems.includes(index) && (
             <div className="p-4 bg-white border-t border-gray-200">
