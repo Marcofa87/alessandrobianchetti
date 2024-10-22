@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { accordionData } from "../../navbar/accordionData";
 import { Plus, Minus } from "lucide-react";
+
 export default function Accordion() {
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [openItems, setOpenItems] = useState<number[]>([0]);
 
   const toggleItem = (index: number) => {
     setOpenItems((prevOpenItems) =>
@@ -33,7 +34,7 @@ export default function Accordion() {
             <span className="m-4 font-medium w-full ">{item.title}</span>
           </button>
           {openItems.includes(index) && (
-            <div className="p-4 border-t border-[var(--tertiary-color)]">
+            <div className="p-4 border-[var(--tertiary-color)]">
               <p>{item.content}</p>
             </div>
           )}
