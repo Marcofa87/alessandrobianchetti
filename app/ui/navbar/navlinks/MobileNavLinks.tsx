@@ -2,7 +2,7 @@ import Link from "next/link";
 import useToggle from "@/components/hooks/useToggle";
 
 export default function MobileNavLinks() {
-  const { isOpen, toggleMenu } = useToggle();
+  const { toggleMenu } = useToggle();
   return (
     <ul className="space-y-4">
       <li>
