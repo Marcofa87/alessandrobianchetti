@@ -12,8 +12,8 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--color);
+  background: var(--color);
+  color: var(--background);
   font-size: var(--font-size);
   box-sizing: border-box;
 }
