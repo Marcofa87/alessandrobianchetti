@@ -19,13 +19,18 @@ export default function Navbar() {
     <nav className="p-4 relative">
       <div className="container mx-auto flex justify-between items-center">
         <div className="logo">
-          <Image
-            src={logo}
-            alt="Personal Trainer Logo"
-            width={100}
-            height={100}
-            className="rounded-full"
-          />
+          <Link
+            href="/"
+            className="hover:text-accent transition-colors duration-200"
+          >
+            <Image
+              src={logo}
+              alt="Personal Trainer Logo"
+              width={100}
+              height={100}
+              className="rounded-full"
+            />
+          </Link>
         </div>
 
         {/* Centered flags for both mobile and desktop */}
