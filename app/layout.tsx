@@ -16,9 +16,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.className} antialiased `}>
-        <nav>
-          <Navbar />
-        </nav>
+        <header>
+          <nav>
+            <Navbar />
+          </nav>
+        </header>
+
         <main className="mt-12">{children}</main>
       </body>
     </html>
