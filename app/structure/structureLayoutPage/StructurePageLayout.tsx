@@ -24,8 +24,8 @@ export default function StructurePageLayout({
           className="m-auto p-4 rounded-3xl"
         />
       </div>
-      <div className="md:w-1/2">
-        <p className="px-6 mt-8 max-w-prose mx-auto text-center md:text-left">
+      <div className="md:w-1/2 ">
+        <p className="px-6 mt-8  mx-auto text-center md:text-left">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
           possimus ducimus dignissimos tenetur quis perferendis voluptates
           dolore ex at quas ratione sequi neque nisi cum, ipsam, ab libero, quam
