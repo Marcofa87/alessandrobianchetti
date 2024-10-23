@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { roboto } from "./ui/fonts";
 import "./styles/globals.css";
 import Navbar from "./ui/navbar/Navbar";
+import Footer from "./ui/footer/Footer";
 
 export const metadata: Metadata = {
   title: "Alessandro Bianchetti",
@@ -21,8 +22,8 @@ export default function RootLayout({
             <Navbar />
           </nav>
         </header>
-
         <main className="mt-12">{children}</main>
+        <Footer />
       </body>
     </html>
   );
