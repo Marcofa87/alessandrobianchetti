@@ -4,6 +4,7 @@ import Image from "next/image";
 import gymMainImage from "@/components/public/victor-freitas-WvDYdXDzkhs-unsplash.jpg";
 import Accordion from "./accordion/Accordion";
 import MapLocation from "./locationmap/MapLocation";
+import Footer from "../footer/Footer";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       />
       <Accordion />
       <MapLocation />
+      <Footer />
     </div>
   );
 }
