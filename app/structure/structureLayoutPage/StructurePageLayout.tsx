@@ -1,37 +1,37 @@
-// StructurePageLayout.tsx
+// components/StructurePageLayout.tsx
 import Image from "next/image";
+import { StructureSection } from "./structureData";
 
-interface ImportedImage {
-  src: string;
-  width: number;
-  height: number;
-}
-
-interface StructureImageProps {
-  structureImage: ImportedImage;
+export interface StructurePageLayoutProps {
+  sections: StructureSection[];
 }
 
 export default function StructurePageLayout({
-  structureImage,
-}: StructureImageProps) {
+  sections,
+}: StructurePageLayoutProps) {
   return (
-    <section className="p-6 md:flex md:items-center md:even:flex-row-reverse">
-      <div className="md:w-1/2">
-        <Image
-          src={structureImage}
-          alt="immagine della palestra"
-          width={350}
-          className="m-auto p-4 rounded-3xl"
-        />
-      </div>
-      <div className="md:w-2/3">
-        <p className="px-6 mt-8  mx-auto text-center md:text-left">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
-          possimus ducimus dignissimos tenetur quis perferendis voluptates
-          dolore ex at quas ratione sequi neque nisi cum, ipsam, ab libero, quam
-          esse?
-        </p>
-      </div>
-    </section>
+    <div className="container mx-auto py-12">
+      {sections.map((section) => (
+        <section
+          key={section.id}
+          className="p-6 md:flex md:items-center md:even:flex-row-reverse mb-12"
+        >
+          <div className="md:w-1/2">
+            <Image
+              src={section.image.src}
+              alt={section.image.alt}
+              width={section.image.width}
+              height={section.image.height}
+              className="m-auto p-4 rounded-3xl"
+            />
+          </div>
+          <div className="md:w-2/3">
+            <p className="px-6 mt-8 mx-auto text-center md:text-left">
+              {section.text}
+            </p>
+          </div>
+        </section>
+      ))}
+    </div>
   );
 }
