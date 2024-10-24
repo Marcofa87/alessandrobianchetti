@@ -4,8 +4,9 @@ import "./styles/globals.css";
 import Navbar from "./ui/navbar/Navbar";
 import Footer from "./ui/footer/Footer";
 import { Suspense } from "react";
-import loading from "./loading";
+
 import Loading from "./loading";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Alessandro Bianchetti",
@@ -18,18 +19,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${roboto.className} antialiased  max-w-6xl m-auto`}>
-        <header>
-          <nav>
-            <Navbar />
-          </nav>
-        </header>
-        <Suspense fallback={<Loading />}>
-          <main className="mt-12">{children}</main>
-        </Suspense>
-        <Footer />
-      </body>
-    </html>
+    <>
+      <html lang="en">
+        <body className={`${roboto.className} antialiased  max-w-6xl m-auto`}>
+          <Analytics />
+          <header>
+            <nav>
+              <Navbar />
+            </nav>
+          </header>
+          <Suspense fallback={<Loading />}>
+            <main className="mt-12">{children}</main>
+          </Suspense>
+          <Footer />
+        </body>
+      </html>
+    </>
   );
 }
