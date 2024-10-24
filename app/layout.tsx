@@ -28,9 +28,7 @@ export default function RootLayout({
               <Navbar />
             </nav>
           </header>
-          <Suspense fallback={<Loading />}>
-            <main className="mt-12">{children}</main>
-          </Suspense>
+          <main className="mt-12">{children}</main>
           <Footer />
         </body>
       </html>
