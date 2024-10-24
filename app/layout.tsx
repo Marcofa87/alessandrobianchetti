@@ -3,6 +3,9 @@ import { roboto } from "./ui/fonts";
 import "./styles/globals.css";
 import Navbar from "./ui/navbar/Navbar";
 import Footer from "./ui/footer/Footer";
+import { Suspense } from "react";
+import loading from "./loading";
+import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: "Alessandro Bianchetti",
@@ -22,7 +25,9 @@ export default function RootLayout({
             <Navbar />
           </nav>
         </header>
-        <main className="mt-12">{children}</main>
+        <Suspense fallback={<Loading />}>
+          <main className="mt-12">{children}</main>
+        </Suspense>
         <Footer />
       </body>
     </html>
