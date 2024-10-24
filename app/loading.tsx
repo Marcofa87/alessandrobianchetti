@@ -1,5 +1,3 @@
-function Loading() {
-  return <div>wait a moment</div>;
+export default function Loading() {
+  return <div>wait</div>;
 }
-
-export default Loading;
