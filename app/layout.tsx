@@ -3,10 +3,8 @@ import { roboto } from "./ui/fonts";
 import "./styles/globals.css";
 import Navbar from "./ui/navbar/Navbar";
 import Footer from "./ui/footer/Footer";
-import { Suspense } from "react";
 
 import { Analytics } from "@vercel/analytics/react";
-import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: "Alessandro Bianchetti",
