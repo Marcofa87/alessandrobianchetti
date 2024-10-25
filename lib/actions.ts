@@ -11,8 +11,7 @@ export async function sendEmail(data: {
 }) {
   try {
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: parseInt(process.env.SMTP_PORT || "587"),
+      service: "gmail",
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
@@ -20,8 +19,9 @@ export async function sendEmail(data: {
     });
 
     const mailOptions = {
-      from: process.env.SMTP_FROM,
+      from: process.env.SMTP_USER,
       to: "marco.falasca87@gmail.com",
+      replyTo: data.email, // This allows you to reply directly to the sender
       subject: `New contact form submission: ${data.subject}`,
       text: `
         Name: ${data.name}
@@ -32,7 +32,9 @@ export async function sendEmail(data: {
       `,
     };
 
+    console.log("Attempting to send email...");
     await transporter.sendMail(mailOptions);
+    console.log("Email sent successfully");
     return { success: true };
   } catch (error) {
     console.error("Error sending email:", error);
