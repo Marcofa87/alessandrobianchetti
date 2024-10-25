@@ -2,14 +2,6 @@
 
 import nodemailer from "nodemailer";
 
-type EmailData = {
-  name: string;
-  phone: string;
-  email: string;
-  subject: string;
-  message: string;
-};
-
 export async function sendEmail(data: {
   name: string;
   phone: string;
