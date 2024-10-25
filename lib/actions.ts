@@ -30,7 +30,7 @@ export async function sendEmail(data: {
     });
 
     const mailOptions = {
-      from: data.email,
+      from: process.env.SMTP_USER,
       to: "marco.falasca87@gmail.com",
       replyTo: data.email, // Permette di rispondere direttamente al mittente
       subject: `New contact form submission: ${data.subject}`,
