@@ -1,65 +1,81 @@
 "use client";
 
-import { useState, ChangeEvent, FormEvent } from "react";
-
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { sendEmail } from "@/components/actions/actions";
 interface FormData {
   name: string;
   email: string;
   phone: string;
-  object: string;
+  subject: string;
   message: string;
 }
 
-const ContactForm = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    phone: "",
-    object: "",
-    message: "",
-  });
+export default function ContactForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<FormData>();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(
+    null
+  );
 
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    const mailtoLink = `mailto:marco.falasca87@gmail.com?object=${encodeURIComponent(
-      formData.object
-    )}&body=${encodeURIComponent(
-      `Nome: ${formData.name} Email: ${formData.email} Telefono: ${formData.phone}  Messaggio: ${formData.message}`
-    )}`;
-
-    window.location.href = mailtoLink;
+  const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
+    try {
+      await sendEmail(data);
+      setSubmitStatus("success");
+      reset();
+    } catch (error) {
+      setSubmitStatus("error");
+    }
+    setIsSubmitting(false);
   };
 
   return (
     <div className="w-full max-w-2xl mx-auto p-6">
       <h2>Contattami!</h2>
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="space-y-4 max-w-md mx-auto"
+      >
         <div>
           <label
             htmlFor="name"
             className="block font-medium text-[var(--text-color)]"
           >
-            Nome
+            Name
           </label>
           <input
+            {...register("name", { required: "Name is required" })}
             type="text"
             id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
             className="mt-1 text-[var(--color)] block w-full rounded-md border-[var(--tertiary-color)] shadow-sm focus:border-[var(--tertiary-color)] focus:ring-[var(--tertiary-color)] p-2"
           />
+          {errors.name && (
+            <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
+          )}
+        </div>
+
+        <div>
+          <label
+            htmlFor="number"
+            className="block font-medium text-[var(--text-color)]"
+          >
+            Number
+          </label>
+          <input
+            {...register("phone", { required: "Number is required" })}
+            type="tel"
+            id="number"
+            className="mt-1 block w-full rounded-md text-[var(--color)] shadow-sm  p-2"
+          />
+          {errors.phone && (
+            <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
+          )}
         </div>
 
         <div>
@@ -70,46 +86,37 @@ const ContactForm = () => {
             Email
           </label>
           <input
+            {...register("email", {
+              required: "Email is required",
+              pattern: {
+                value: /\S+@\S+\.\S+/,
+                message: "Invalid email address",
+              },
+            })}
             type="email"
             id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
             className="mt-1 block w-full rounded-md border-[var(--tertiary-color)] text-[var(--color)] shadow-sm  p-2"
           />
+          {errors.email && (
+            <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
+          )}
         </div>
 
         <div>
-          <label
-            htmlFor="phone"
-            className="block font-medium text-[var(--text-color)]"
-          >
-            Telefono
+          <label htmlFor="subject" className="block text-[var(--text-color)] ">
+            Subject
           </label>
           <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className="mt-1 block w-full rounded-md text-[var(--color)] shadow-sm  p-2"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="object" className="block text-[var(--text-color)] ">
-            Oggetto
-          </label>
-          <input
+            {...register("subject", { required: "Subject is required" })}
             type="text"
-            id="object"
-            name="object"
-            value={formData.object}
-            onChange={handleChange}
-            required
+            id="subject"
             className="mt-1 block w-full rounded-md shadow-sm text-[var(--color)] p-2"
           />
+          {errors.subject && (
+            <p className="mt-1 text-sm text-red-600">
+              {errors.subject.message}
+            </p>
+          )}
         </div>
 
         <div>
@@ -117,28 +124,40 @@ const ContactForm = () => {
             htmlFor="message"
             className="block font-medium text-[var(--text-color)]"
           >
-            Messaggio
+            Message
           </label>
           <textarea
+            {...register("message", { required: "Message is required" })}
             id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
             rows={4}
             className="mt-1 block w-full  rounded-md shadow-sm text-[var(--color)] p-2"
-          />
+          ></textarea>
+          {errors.message && (
+            <p className="mt-1 text-sm text-red-600">
+              {errors.message.message}
+            </p>
+          )}
         </div>
 
         <button
           type="submit"
+          disabled={isSubmitting}
           className="w-full px-4 py-2 bg-[var(--tertiary-color)] text-[var(--text-color)] font-bold text-xl rounded-md hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[var(--tertiary-color)] focus:ring-offset-2"
         >
-          Invia
+          {isSubmitting ? "Sending..." : "Send Message"}
         </button>
+
+        {submitStatus === "success" && (
+          <p className="mt-2 text-sm text-green-600">
+            Your message has been sent successfully!
+          </p>
+        )}
+        {submitStatus === "error" && (
+          <p className="mt-2 text-sm text-red-600">
+            There was an error sending your message. Please try again.
+          </p>
+        )}
       </form>
     </div>
   );
-};
-
-export default ContactForm;
+}
