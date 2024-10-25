@@ -30,10 +30,10 @@ export default function ContactForm() {
       await sendEmail(data);
       setSubmitStatus("success");
       reset();
-    } catch (error) {
+    } catch (_error) {
       setSubmitStatus("error");
       setErrorMessage(
-        error instanceof Error ? error.message : "An unknown error occurred"
+        _error instanceof Error ? _error.message : "An unknown error occurred"
       );
     }
     setIsSubmitting(false);
