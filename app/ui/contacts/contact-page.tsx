@@ -46,7 +46,7 @@ export default function ContactForm() {
 
   return (
     <div className="w-full max-w-2xl mx-auto p-6">
-      <h2>Contattami!</h2>
+      <h2 className="text-center">Contattami!</h2>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="space-y-4 max-w-md mx-auto"
