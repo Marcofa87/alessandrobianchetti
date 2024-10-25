@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { sendEmail } from "@/components/actions/actions";
+import { sendEmail } from "@/../lib/actions";
+
 interface FormData {
   name: string;
   email: string;
@@ -27,13 +28,17 @@ export default function ContactForm() {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
-      await sendEmail(data);
-      setSubmitStatus("success");
-      reset();
-    } catch (_error) {
+      const result = await sendEmail(data);
+      if (result.success) {
+        setSubmitStatus("success");
+        reset();
+      } else {
+        throw new Error(result.error);
+      }
+    } catch (error) {
       setSubmitStatus("error");
       setErrorMessage(
-        _error instanceof Error ? _error.message : "An unknown error occurred"
+        error instanceof Error ? error.message : "An unknown error occurred"
       );
     }
     setIsSubmitting(false);
@@ -75,7 +80,7 @@ export default function ContactForm() {
             {...register("phone", { required: "Number is required" })}
             type="tel"
             id="number"
-            className="mt-1 block w-full rounded-md text-[var(--color)] shadow-sm  p-2"
+            className="mt-1 block w-full rounded-md text-[var(--color)] shadow-sm p-2"
           />
           {errors.phone && (
             <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
@@ -99,7 +104,7 @@ export default function ContactForm() {
             })}
             type="email"
             id="email"
-            className="mt-1 block w-full rounded-md border-[var(--tertiary-color)] text-[var(--color)] shadow-sm  p-2"
+            className="mt-1 block w-full rounded-md border-[var(--tertiary-color)] text-[var(--color)] shadow-sm p-2"
           />
           {errors.email && (
             <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
@@ -107,7 +112,7 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="subject" className="block text-[var(--text-color)] ">
+          <label htmlFor="subject" className="block text-[var(--text-color)]">
             Subject
           </label>
           <input
@@ -134,7 +139,7 @@ export default function ContactForm() {
             {...register("message", { required: "Message is required" })}
             id="message"
             rows={4}
-            className="mt-1 block w-full  rounded-md shadow-sm text-[var(--color)] p-2"
+            className="mt-1 block w-full rounded-md shadow-sm text-[var(--color)] p-2"
           ></textarea>
           {errors.message && (
             <p className="mt-1 text-sm text-red-600">
