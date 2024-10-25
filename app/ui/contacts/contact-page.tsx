@@ -65,7 +65,9 @@ export default function ContactForm() {
             className="mt-1 text-[var(--color)] block w-full rounded-md border-[var(--tertiary-color)] shadow-sm focus:border-[var(--tertiary-color)] focus:ring-[var(--tertiary-color)] p-2"
           />
           {errors.name && (
-            <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>
+            <p className="mt-1 text-sm text-[--tertiary-color]">
+              {errors.name.message}
+            </p>
           )}
         </div>
 
@@ -83,7 +85,9 @@ export default function ContactForm() {
             className="mt-1 block w-full rounded-md text-[var(--color)] shadow-sm p-2"
           />
           {errors.phone && (
-            <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
+            <p className="mt-1 text-sm text-[var(--text-color)]">
+              {errors.phone.message}
+            </p>
           )}
         </div>
 
@@ -107,7 +111,9 @@ export default function ContactForm() {
             className="mt-1 block w-full rounded-md border-[var(--tertiary-color)] text-[var(--color)] shadow-sm p-2"
           />
           {errors.email && (
-            <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>
+            <p className="mt-1 text-sm text-[var(--text-color)]">
+              {errors.email.message}
+            </p>
           )}
         </div>
 
@@ -122,7 +128,7 @@ export default function ContactForm() {
             className="mt-1 block w-full rounded-md shadow-sm text-[var(--color)] p-2"
           />
           {errors.subject && (
-            <p className="mt-1 text-sm text-red-600">
+            <p className="mt-1 text-sm text-[var(--text-color)]">
               {errors.subject.message}
             </p>
           )}
@@ -142,7 +148,7 @@ export default function ContactForm() {
             className="mt-1 block w-full rounded-md shadow-sm text-[var(--color)] p-2"
           ></textarea>
           {errors.message && (
-            <p className="mt-1 text-sm text-red-600">
+            <p className="mt-1 text-sm text-[var(--text-color)]">
               {errors.message.message}
             </p>
           )}
@@ -162,7 +168,7 @@ export default function ContactForm() {
           </p>
         )}
         {submitStatus === "error" && (
-          <p className="mt-2 text-sm text-red-600">
+          <p className="mt-2 text-sm text-[var(--text-color)]">
             {errorMessage ||
               "There was an error sending your message. Please try again."}
           </p>
