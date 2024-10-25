@@ -22,6 +22,7 @@ export default function ContactForm() {
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | null>(
     null
   );
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
@@ -31,6 +32,9 @@ export default function ContactForm() {
       reset();
     } catch (error) {
       setSubmitStatus("error");
+      setErrorMessage(
+        error instanceof Error ? error.message : "An unknown error occurred"
+      );
     }
     setIsSubmitting(false);
   };
@@ -154,7 +158,8 @@ export default function ContactForm() {
         )}
         {submitStatus === "error" && (
           <p className="mt-2 text-sm text-red-600">
-            There was an error sending your message. Please try again.
+            {errorMessage ||
+              "There was an error sending your message. Please try again."}
           </p>
         )}
       </form>
