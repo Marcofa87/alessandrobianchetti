@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { accordionData } from "../../navbar/accordionData";
+import { accordionData } from "@/components/ui/navbar/accordionData";
 import { Plus, Minus } from "lucide-react";
 
 export default function Accordion() {
@@ -28,9 +28,9 @@ export default function Accordion() {
           >
             <span className="flex items-center justify-center w-6 h-6 text-[var(--tertiary-color)]">
               {openItems.includes(index) ? (
-                <Minus size={16} />
+                <Minus size={22} />
               ) : (
-                <Plus size={16} />
+                <Plus size={22} />
               )}
             </span>
             <span className="m-4 font-medium w-full">{item.title}</span>
