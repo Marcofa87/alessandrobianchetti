@@ -4,7 +4,7 @@ import { MdAlternateEmail } from "react-icons/md";
 export default function ContactPage() {
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
-      <h2 className="font-bold mb-6 text-[var(--color)]">Informazioni</h2>
+      <h2 className=" mb-6 text-[var(--color)]">Informazioni</h2>
       <div className="space-y-4">
         <div className="flex items-center">
           <div className="flex-shrink-0 w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">

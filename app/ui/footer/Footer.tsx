@@ -1,4 +1,3 @@
-import { Dumbbell } from "lucide-react";
 import { FiInstagram, FiLinkedin } from "react-icons/fi";
 
 export default function Footer() {
