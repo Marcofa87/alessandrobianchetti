@@ -8,7 +8,7 @@ import MapLocation from "./locationmap/MapLocation";
 export default function HomePage() {
   return (
     <div className="w-3/4 md:max-w-3xl mx-auto space-y-12">
-      <h1 className="text-center text-3xl font-bold">
+      <h1 className="text-center font-bold">
         Alessandro Bianchetti Personal Trainer
       </h1>
       <Image

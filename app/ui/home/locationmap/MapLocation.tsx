@@ -1,7 +1,7 @@
 export default function MapLocation() {
   return (
     <div>
-      <h2 className="text-center text-2xl mb-6 font-medium">Mi trovi qui</h2>
+      <h2 className="text-center mb-6 font-medium">Mi trovi qui</h2>
       <div className="relative w-full h-0 pb-[56.25%] m-auto sm:pb-[75%]">
         {/* Proporzioni 16:9 su desktop, 4:3 su mobile */}
         <iframe

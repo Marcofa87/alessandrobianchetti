@@ -17,3 +17,11 @@ body {
   font-size: var(--font-size);
   box-sizing: border-box;
 }
+
+h1 {
+  font-size: 1.875rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
