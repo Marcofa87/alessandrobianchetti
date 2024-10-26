@@ -3,8 +3,8 @@ import { roboto } from "./ui/fonts";
 import "./styles/globals.css";
 import Navbar from "./ui/navbar/Navbar";
 import Footer from "./ui/footer/Footer";
+
 import { Analytics } from "@vercel/analytics/react";
-import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Alessandro Bianchetti",
@@ -19,9 +19,6 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-        <Head>
-          <link rel="icon" href="/favicon.ico" sizes="any" />
-        </Head>
         <body className={`${roboto.className} antialiased  max-w-6xl m-auto `}>
           <Analytics />
           <header>
