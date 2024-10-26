@@ -91,7 +91,7 @@ export default function ContactForm() {
               pattern: {
                 value:
                   /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
-                message: "Invalid email address",
+                message: "Invalid phone number",
               },
             })}
             type="tel"
