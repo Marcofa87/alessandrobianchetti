@@ -52,7 +52,7 @@ export default function ContactForm() {
       <h2 className="text-center mb-8">Contattami subito!</h2>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="space-y-4 max-w-md mx-auto bg-stone-100 p-6"
+        className="space-y-4 max-w-md mx-auto rounded-3xl bg-stone-100 p-6"
       >
         <div>
           <label
