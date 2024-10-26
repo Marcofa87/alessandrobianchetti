@@ -9,9 +9,6 @@ import { Analytics } from "@vercel/analytics/react";
 export const metadata: Metadata = {
   title: "Alessandro Bianchetti",
   description: "Alessandro Bianchetti Personal Trainer",
-  icons: {
-    icon: "/app/public/favicon/android-chrome-192x192.png",
-  },
 };
 
 export default function RootLayout({
