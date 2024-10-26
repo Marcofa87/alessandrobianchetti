@@ -65,7 +65,7 @@ export default function ContactForm() {
             className="mt-1 text-[var(--color)] block w-full rounded-md border-[var(--tertiary-color)] shadow-sm focus:border-[var(--tertiary-color)] focus:ring-[var(--tertiary-color)] p-2"
           />
           {errors.name && (
-            <p className="mt-1 text-sm text-[--tertiary-color]">
+            <p className="mt-1 text-sm text-[var(--tertiary-color)]">
               {errors.name.message}
             </p>
           )}
@@ -85,7 +85,7 @@ export default function ContactForm() {
             className="mt-1 block w-full rounded-md text-[var(--color)] shadow-sm p-2"
           />
           {errors.phone && (
-            <p className="mt-1 text-sm text-[var(--text-color)]">
+            <p className="mt-1 text-sm text-[var(--tertiary-color)]">
               {errors.phone.message}
             </p>
           )}
@@ -111,7 +111,7 @@ export default function ContactForm() {
             className="mt-1 block w-full rounded-md border-[var(--tertiary-color)] text-[var(--color)] shadow-sm p-2"
           />
           {errors.email && (
-            <p className="mt-1 text-sm text-[var(--text-color)]">
+            <p className="mt-1 text-sm text-[var(--tertiary-color)]">
               {errors.email.message}
             </p>
           )}
@@ -128,7 +128,7 @@ export default function ContactForm() {
             className="mt-1 block w-full rounded-md shadow-sm text-[var(--color)] p-2"
           />
           {errors.subject && (
-            <p className="mt-1 text-sm text-[var(--text-color)]">
+            <p className="mt-1 text-sm text-[var(--tertiary-color)]">
               {errors.subject.message}
             </p>
           )}
@@ -148,7 +148,7 @@ export default function ContactForm() {
             className="mt-1 block w-full rounded-md shadow-sm text-[var(--color)] p-2"
           ></textarea>
           {errors.message && (
-            <p className="mt-1 text-sm text-[var(--text-color)]">
+            <p className="mt-1 text-sm text-[var(--tertiary-color)]">
               {errors.message.message}
             </p>
           )}
