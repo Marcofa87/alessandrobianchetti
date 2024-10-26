@@ -52,12 +52,12 @@ export default function ContactForm() {
       <h2 className="text-center mb-8">Contattami subito!</h2>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="space-y-4 max-w-md mx-auto "
+        className="space-y-4 max-w-md mx-auto bg-stone-100 p-6"
       >
         <div>
           <label
             htmlFor="name"
-            className="block font-medium text-[var(--background)]"
+            className="block font-semibold  text-[var(--color)]"
           >
             Name
           </label>
@@ -65,7 +65,11 @@ export default function ContactForm() {
             {...register("name", { required: "Name is required" })}
             type="text"
             id="name"
-            className="mt-1 text-[var(--color)] block w-full rounded-md border-[var(--tertiary-color)] shadow-sm focus:border-[var(--tertiary-color)] focus:ring-[var(--tertiary-color)] p-2"
+            className={`mt-1 block w-full rounded-md 
+              border ${errors.name ? "border-red-700" : "border-slate-900"} 
+              text-[var(--color)] shadow-sm 
+              focus:border-[var(--tertiary-color)] 
+              focus:ring-[var(--tertiary-color)] p-2`}
           />
           {errors.name && (
             <p className="mt-1 text-sm text-[var(--tertiary-color)]">
@@ -77,7 +81,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="number"
-            className="block font-medium text-[var(--text-color)]"
+            className="block font-semibold text-[var(--color)] "
           >
             Number
           </label>
@@ -85,7 +89,9 @@ export default function ContactForm() {
             {...register("phone", { required: "Number is required" })}
             type="tel"
             id="number"
-            className="mt-1 block w-full rounded-md text-[var(--color)] shadow-sm p-2"
+            className={`mt-1 border border ${
+              errors.phone ? "border-red-700" : "border-slate-900"
+            } block w-full rounded-md text-[var(--color)] shadow-sm p-2`}
           />
           {errors.phone && (
             <p className="mt-1 text-sm text-[var(--tertiary-color)]">
@@ -97,7 +103,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="email"
-            className="block font-medium text-[var(--text-color)]"
+            className="block font-semibold text-[var(--color)]"
           >
             Email
           </label>
@@ -111,7 +117,9 @@ export default function ContactForm() {
             })}
             type="email"
             id="email"
-            className="mt-1 block w-full rounded-md border-[var(--tertiary-color)] text-[var(--color)] shadow-sm p-2"
+            className={`mt-1 block w-full rounded-md border ${
+              errors.email ? "border-red-700" : "border-slate-900"
+            } text-[var(--color)] shadow-sm p-2`}
           />
           {errors.email && (
             <p className="mt-1 text-sm text-[var(--tertiary-color)]">
@@ -121,14 +129,19 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="subject" className="block text-[var(--text-color)]">
+          <label
+            htmlFor="subject"
+            className="block font-semibold  text-[var(--color)]"
+          >
             Subject
           </label>
           <input
             {...register("subject", { required: "Subject is required" })}
             type="text"
             id="subject"
-            className="mt-1 block w-full rounded-md shadow-sm text-[var(--color)] p-2"
+            className={`mt-1 border ${
+              errors.subject ? "border-red-700" : "border-slate-900"
+            } block w-full rounded-md shadow-sm text-[var(--color)] p-2`}
           />
           {errors.subject && (
             <p className="mt-1 text-sm text-[var(--tertiary-color)]">
@@ -140,7 +153,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="message"
-            className="block font-medium text-[var(--text-color)]"
+            className="block font-semibold  text-[var(--color)] "
           >
             Message
           </label>
@@ -148,10 +161,12 @@ export default function ContactForm() {
             {...register("message", { required: "Message is required" })}
             id="message"
             rows={4}
-            className="mt-1 block w-full rounded-md shadow-sm text-[var(--color)] p-2"
+            className={`mt-1 block border ${
+              errors.message ? "border-red-700" : "border-slate-900"
+            } w-full rounded-md shadow-sm text-[var(--color)] p-2`}
           ></textarea>
           {errors.message && (
-            <p className="mt-1 text-sm text-[var(--tertiary-color)]">
+            <p className="mt-1 text-sm text-[var(--tertiary-color)] ">
               {errors.message.message}
             </p>
           )}
