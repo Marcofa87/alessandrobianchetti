@@ -7,7 +7,7 @@ import Footer from "./ui/footer/Footer";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "Alessandro Bianchetti",
+  title: "Alessandro Bianchetti Personal Trainer",
   description: "Alessandro Bianchetti Personal Trainer",
 };
 
