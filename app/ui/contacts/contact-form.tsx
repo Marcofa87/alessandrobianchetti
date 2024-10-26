@@ -89,7 +89,7 @@ export default function ContactForm() {
             {...register("phone", { required: "Number is required" })}
             type="tel"
             id="number"
-            className={`mt-1 border border ${
+            className={`mt-1 border ${
               errors.phone ? "border-red-700" : "border-slate-900"
             } block w-full rounded-md text-[var(--color)] shadow-sm p-2`}
           />
