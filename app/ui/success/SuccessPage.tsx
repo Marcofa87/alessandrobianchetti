@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function SuccessSubmit() {
   return (
-    <div className="flex flex-col items-center   ">
+    <div className="flex flex-col items-center mt-52 ">
       <h1 className="text-3xl font-bold  mb-4">Successo!</h1>
       <p className="text-lg  mb-6">Il tuo form è stato inviato con successo.</p>
       <Link href="/" passHref>
