@@ -10,6 +10,7 @@ export default function MapLocation() {
           allowFullScreen={true}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
+          title="location map"
         ></iframe>
       </div>
     </div>
