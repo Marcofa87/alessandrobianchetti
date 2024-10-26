@@ -31,16 +31,18 @@ export async function sendEmail(data: {
 
     const mailOptions = {
       from: process.env.SMTP_USER,
-      to: "marco.falasca87@gmail.com",
+      to: process.env.SMTP_USER,
       replyTo: data.email, // Permette di rispondere direttamente al mittente
-      subject: `New contact form submission: ${data.subject}`,
-      text: `
-        Name: ${data.name}
-        Phone: ${data.phone}
-        Email: ${data.email}
-        Subject: ${data.subject}
-        Message: ${data.message}
-      `,
+      subject: data.subject,
+      html: `
+      <h1>Hai ricevuto un nuovo messaggio di contatto</h1>
+      <p><strong>Nome:</strong> ${data.name}</p>
+      <p><strong>Telefono:</strong> ${data.phone}</p>
+      <p><strong>Email:</strong> ${data.email}</p>
+      <p><strong>Oggetto:</strong> ${data.subject}</p>
+      <h2>Messaggio:</h2>
+      <p>${data.message}</p>
+    `,
     };
 
     console.log("Attempting to send email...");
