@@ -5,7 +5,7 @@ export default function DesktopNavLinks() {
     <div>
       <Link
         href="/structure"
-        className="hover:text-accent transition-colors duration-200 mr-3"
+        className="hover:text-accent transition-colors duration-200 mr-10"
       >
         Struttura
       </Link>
