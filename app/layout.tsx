@@ -19,14 +19,14 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-        <body className={`${roboto.className} antialiased  max-w-6xl m-auto`}>
+        <body className={`${roboto.className} antialiased  max-w-6xl m-auto `}>
           <Analytics />
           <header>
             <nav>
               <Navbar />
             </nav>
           </header>
-          <main className="mt-12">{children}</main>
+          <main className="mt-12 min-h-screen">{children}</main>
           <Footer />
         </body>
       </html>

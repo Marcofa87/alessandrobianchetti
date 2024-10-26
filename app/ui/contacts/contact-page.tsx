@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "@/../lib/actions";
+import { useRouter } from "next/navigation";
 
 interface FormData {
   name: string;
@@ -13,6 +14,7 @@ interface FormData {
 }
 
 export default function ContactForm() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -32,6 +34,7 @@ export default function ContactForm() {
       if (result.success) {
         setSubmitStatus("success");
         reset();
+        router.push("/success");
       } else {
         throw new Error(result.error);
       }
@@ -162,11 +165,11 @@ export default function ContactForm() {
           {isSubmitting ? "Sending..." : "Send Message"}
         </button>
 
-        {submitStatus === "success" && (
+        {/* {submitStatus === "success" && (
           <p className="mt-2 text-sm text-green-600">
             Your message has been sent successfully!
           </p>
-        )}
+        )} */}
         {submitStatus === "error" && (
           <p className="mt-2 text-sm text-[var(--text-color)]">
             {errorMessage ||
