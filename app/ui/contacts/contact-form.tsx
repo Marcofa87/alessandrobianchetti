@@ -52,7 +52,7 @@ export default function ContactForm() {
       <h2 className="text-center mb-8">Contattami subito!</h2>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="space-y-4 max-w-md mx-auto rounded-3xl bg-stone-100 p-6"
+        className="space-y-4 max-w-md mx-auto rounded-xl bg-stone-100 p-6"
       >
         <div>
           <label
@@ -86,7 +86,14 @@ export default function ContactForm() {
             Number
           </label>
           <input
-            {...register("phone", { required: "Number is required" })}
+            {...register("phone", {
+              required: "Number is required",
+              pattern: {
+                value:
+                  /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+                message: "Invalid email address",
+              },
+            })}
             type="tel"
             id="number"
             className={`mt-1 border ${
