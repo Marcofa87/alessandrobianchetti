@@ -1,5 +1,5 @@
-import StructurePageLayout from "../../ui/structureLayoutPage/StructurePageLayout";
-import { structureSections } from "../../ui/structureLayoutPage/structureData";
+import StructurePageLayout from "@/components/ui/structureLayoutPage/StructurePageLayout";
+import { structureSections } from "@/components/ui/structureLayoutPage/structureData";
 
 export default function Page() {
   return (
