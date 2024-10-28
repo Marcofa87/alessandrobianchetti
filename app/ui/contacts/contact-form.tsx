@@ -187,11 +187,6 @@ export default function ContactForm() {
           {isSubmitting ? "Sending..." : "Send Message"}
         </button>
 
-        {/* {submitStatus === "success" && (
-          <p className="mt-2 text-sm text-green-600">
-            Your message has been sent successfully!
-          </p>
-        )} */}
         {submitStatus === "error" && (
           <p className="mt-2 text-sm text-[var(--text-color)]">
             {errorMessage ||
