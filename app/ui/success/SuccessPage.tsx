@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function SuccessSubmit() {
   return (
-    <div className="flex flex-col items-center mt-52 ">
+    <div className="flex flex-col items-center mt-28 ">
       <h2 className=" mb-4">Successo!</h2>
       <p className="text-lg  mb-6">Il tuo form è stato inviato con successo.</p>
       <BicepsFlexed className="my-8" size={128} color="#c1292e" />
