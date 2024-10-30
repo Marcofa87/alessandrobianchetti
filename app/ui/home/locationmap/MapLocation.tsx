@@ -10,7 +10,7 @@ export default function MapLocation() {
           allowFullScreen={true}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="location map"
+          title="Mappa della posizione di Kamehouse Studio a Roma"
         ></iframe>
       </div>
     </div>
