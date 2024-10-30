@@ -19,7 +19,7 @@ export default function Accordion() {
       {accordionData.map((item, index) => (
         <div
           key={index}
-          className="border border-[var(--tertiary-color)] rounded-lg overflow-hidden"
+          className="border-y border-[var(--background)] rounded-lg overflow-hidden first:border-t-0"
         >
           <button
             className="flex justify-between items-center w-full p-4 text-left focus:outline-none transition-all"
