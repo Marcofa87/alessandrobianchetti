@@ -33,7 +33,10 @@ export default function Accordion() {
                 <Plus size={22} />
               )}
             </span>
-            <span className="m-4 font-medium w-full">{item.title}</span>
+            <span className="m-4 font-medium w-full flex items-center gap-2">
+              <item.Icon size={20} /> {/* Icona accanto al titolo */}
+              {item.title}
+            </span>
           </button>
           {/* Contenuto con transizione */}
           <div
@@ -43,7 +46,10 @@ export default function Accordion() {
                 : "max-h-0 opacity-0"
             }`}
           >
-            <div className="p-4 ">
+            <div className="p-4 flex items-center gap-2">
+              {" "}
+              {/* Aggiunge flex per allineamento icona e contenuto */}
+              <item.Icon size={20} /> {/* Icona accanto al contenuto */}
               <p>{item.content}</p>
             </div>
           </div>
