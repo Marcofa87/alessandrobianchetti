@@ -16,7 +16,7 @@ export default function Footer() {
       >
         <FiFacebook className="text-2xl mr-4" />
       </a>
-      <a href="">
+      <a href="https://wa.me/393394955810">
         <FaWhatsapp className="text-2xl" />
       </a>
     </footer>
