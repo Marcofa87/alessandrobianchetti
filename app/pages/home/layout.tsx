@@ -2,8 +2,8 @@
 import Image from "next/image";
 
 import gymMainImage from "@/components/public/victor-freitas-WvDYdXDzkhs-unsplash.jpg";
-import Accordion from "./accordion/Accordion";
-import MapLocation from "./locationmap/MapLocation";
+import MapLocation from "@/components/ui/locationmap/MapLocation";
+import Accordion from "@/components/ui/accordion/Accordion";
 
 export default function HomePage() {
   return (
