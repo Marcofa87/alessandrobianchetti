@@ -7,8 +7,11 @@ export default function Footer() {
       <a href="https://www.instagram.com/alexroma84/" target="_blank">
         <FiInstagram className="mr-4 text-2xl" />
       </a>
-      <a href="https://www.linkedin.com/in/alessandro-bianchetti-53562a88/">
-        <FiLinkedin className="text-2xl mr-3" target="_blank" />
+      <a
+        href="https://www.linkedin.com/in/alessandro-bianchetti-53562a88/"
+        target="_blank"
+      >
+        <FiLinkedin className="text-2xl mr-3" />
       </a>
       <a
         href="https://www.facebook.com/alessandro.bianchetti.39/"
