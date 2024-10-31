@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { sendEmail } from "@/../lib/actions";
+import { sendVerificationEmail } from "@/../lib/actions";
 import { useRouter } from "next/navigation";
 
 interface FormData {
@@ -30,7 +30,7 @@ export default function ContactForm() {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     try {
-      const result = await sendEmail(data);
+      const result = await sendVerificationEmail(data.email);
       if (result.success) {
         setSubmitStatus("success");
         reset();
