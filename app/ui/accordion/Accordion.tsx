@@ -47,7 +47,6 @@ export default function Accordion() {
             }`}
           >
             <div className="p-4 flex items-center gap-2">
-              {" "}
               {/* Aggiunge flex per allineamento icona e contenuto */}
               <item.Icon size={20} /> {/* Icona accanto al contenuto */}
               <p>{item.content}</p>
