@@ -34,7 +34,6 @@ export default function Accordion() {
               )}
             </span>
             <span className="m-4 font-medium w-full flex items-center gap-2">
-              <item.Icon size={20} /> {/* Icona accanto al titolo */}
               {item.title}
             </span>
           </button>
@@ -48,7 +47,8 @@ export default function Accordion() {
           >
             <div className="p-4 flex items-center gap-2">
               {/* Aggiunge flex per allineamento icona e contenuto */}
-              <item.Icon size={20} /> {/* Icona accanto al contenuto */}
+              <item.Icon size={20} className="ml-12" />{" "}
+              {/* Icona accanto al contenuto */}
               <p>{item.content}</p>
             </div>
           </div>
