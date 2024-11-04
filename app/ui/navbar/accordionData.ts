@@ -28,7 +28,7 @@ Il mio obiettivo è il miglioramento estetico, la tonificazione e aumento della 
   },
   {
     title: "Lavoro/Servizi",
-    content: `Nel mio studio presente nel cuore del pigneto oltre che di una sala pesi di 21mq attrezzata per le diverse attività  , è presente uno spogliatoio e una doccia a disposizione dei clienti. Un punto relax con caffettiera e bollitore per eventuali the e tisane nei periodi freddi dell'anno.`,
+    content: `Nel mio studio presente nel cuore del pigneto oltre che di una sala pesi di 21mq attrezzata per le diverse attività, è presente uno spogliatoio e una doccia a disposizione dei clienti. Un punto relax con caffettiera e bollitore per eventuali the e tisane nei periodi freddi dell'anno.`,
     Icon: Dumbbell,
   },
 ];
