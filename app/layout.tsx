@@ -1,3 +1,6 @@
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
+
 import type { Metadata } from "next";
 import { roboto } from "./ui/fonts";
 import "./styles/globals.css";
@@ -11,23 +14,30 @@ export const metadata: Metadata = {
   description: "Alessandro Bianchetti Personal Trainer",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  // Providing all messages to the client
+  // side is the easiest way to get started
+  const messages = await getMessages();
+
   return (
     <>
-      <html lang="en">
+      <html lang={locale}>
         <body className={`${roboto.className} antialiased  m-auto `}>
-          <Analytics />
-          <header>
-            <nav>
-              <Navbar />
-            </nav>
-          </header>
-          <main className="mt-12 min-h-screen">{children}</main>
-          <Footer />
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Analytics />
+            <header>
+              <nav>
+                <Navbar />
+              </nav>
+            </header>
+            <main className="mt-12 min-h-screen">{children}</main>
+            <Footer />
+          </NextIntlClientProvider>
         </body>
       </html>
     </>
