@@ -15,10 +15,10 @@ type AccordionItem = {
 export const accordionData: AccordionItem[] = [
   {
     title: "La mia storia",
-    content: `"Ciao sono Alessandro, romano de Roma, classe 1984, dal 2013 sono personal trainer e dal 2024 anche posturologo. 
+    content: `Ciao sono Alessandro, romano de Roma, classe 1984, dal 2013 sono personal trainer e dal 2024 anche posturologo. 
 I miei allenamenti fanno riferimento soprattutto al sollevamento pesi , alla riattivazione e alla tonicità muscolare, infine  allenamento funzionale e tabata. 
 Con i miei recenti studi in posturologia, ho appreso l'importanza di una corretta postura e quanto le irregolarità posturali possano incidere sulla performance sportiva integrando ed integrandoli nelle mie sessioni ho potuto notare dei veri risultati.
-Il mio obiettivo è il miglioramento estetico, la tonificazione e aumento della massa muscolare integrando una corretta postura , un miglioramento della resa sportiva e dell'elasticità muscolare attraverso dei protocolli strutturati e modellati su ciascun individuo."`,
+Il mio obiettivo è il miglioramento estetico, la tonificazione e aumento della massa muscolare integrando una corretta postura , un miglioramento della resa sportiva e dell'elasticità muscolare attraverso dei protocolli strutturati e modellati su ciascun individuo.`,
     Icon: BookOpenText,
   },
   {
