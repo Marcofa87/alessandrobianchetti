@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-        <body className={`${roboto.className} antialiased  max-w-6xl m-auto `}>
+        <body className={`${roboto.className} antialiased  m-auto `}>
           <Analytics />
           <header>
             <nav>

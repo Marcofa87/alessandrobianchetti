@@ -7,14 +7,18 @@ import Accordion from "@/components/ui/accordion/Accordion";
 
 export default function HomePage() {
   return (
-    <div className="w-3/4 md:max-w-3xl mx-auto space-y-12">
-      <h1 className="text-center">Alessandro Bianchetti Personal Trainer</h1>
-      <Image
-        src={gymMainImage}
-        alt="immagine della palestra"
-        width={500}
-        className="m-auto w-2/3 mb-12"
-      />
+    <div className="w-full mx-auto space-y-12 relative">
+      <div className="relative">
+        <Image
+          src={gymMainImage}
+          alt="immagine della palestra"
+          width={500}
+          className="m-auto w-full h-64 opacity-50"
+        />
+        <h1 className="absolute inset-0 top-10 text-center md:text-5xl">
+          Alessandro Bianchetti Personal Trainer
+        </h1>
+      </div>
       <Accordion />
       <MapLocation />
     </div>

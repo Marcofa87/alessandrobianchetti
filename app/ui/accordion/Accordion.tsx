@@ -15,7 +15,7 @@ export default function Accordion() {
   };
 
   return (
-    <div>
+    <div className="p-8 md:max-w-5xl m-auto">
       {accordionData.map((item, index) => (
         <div
           key={index}
