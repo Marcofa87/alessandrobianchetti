@@ -19,25 +19,18 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const locale = await getLocale();
-  // Providing all messages to the client
-  // side is the easiest way to get started
-  const messages = await getMessages();
-
   return (
     <>
-      <html lang={locale}>
+      <html lang="en">
         <body className={`${roboto.className} antialiased  m-auto `}>
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <Analytics />
-            <header>
-              <nav>
-                <Navbar />
-              </nav>
-            </header>
-            <main className="mt-12 min-h-screen">{children}</main>
-            <Footer />
-          </NextIntlClientProvider>
+          <Analytics />
+          <header>
+            <nav>
+              <Navbar />
+            </nav>
+          </header>
+          <main className="mt-12 min-h-screen">{children}</main>
+          <Footer />
         </body>
       </html>
     </>
