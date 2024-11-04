@@ -15,7 +15,7 @@ export default function HomePage() {
           width={500}
           className="m-auto w-full h-64 opacity-50"
         />
-        <h1 className="absolute inset-0 top-10 text-center md:text-5xl">
+        <h1 className="absolute inset-0 top-20 text-center  md:text-5xl font-bold">
           Alessandro Bianchetti Personal Trainer
         </h1>
       </div>
