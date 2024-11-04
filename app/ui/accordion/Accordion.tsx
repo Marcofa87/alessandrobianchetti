@@ -19,7 +19,7 @@ export default function Accordion() {
       {accordionData.map((item, index) => (
         <div
           key={index}
-          className="border-y border-[var(--background)] rounded-lg overflow-hidden first:border-t-0"
+          className="border-y border-[var(--background)] rounded-lg first:border-t-0"
         >
           <button
             className="flex justify-between items-center w-full p-4 text-left focus:outline-none transition-all"
@@ -33,23 +33,24 @@ export default function Accordion() {
                 <Plus size={22} />
               )}
             </span>
-            <span className="m-4 font-medium w-full flex items-center gap-2">
+            <span className="m-4 text-xl font-medium w-full flex items-center gap-2">
               {item.title}
             </span>
           </button>
-          {/* Contenuto con transizione */}
           <div
-            className={`transition-[max-height,opacity] duration-300 ease-in-out overflow-hidden ${
+            className={`transition-all duration-300 ease-in-out ${
               openItems.includes(index)
-                ? "max-h-40 opacity-100"
-                : "max-h-0 opacity-0"
+                ? "opacity-100"
+                : "h-0 opacity-0 overflow-hidden"
             }`}
           >
-            <div className="p-4 flex items-center gap-2">
-              {/* Aggiunge flex per allineamento icona e contenuto */}
-              <item.Icon size={20} className="ml-12" />{" "}
-              {/* Icona accanto al contenuto */}
-              <p>{item.content}</p>
+            <div className="p-4">
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <item.Icon size={24} />
+                </div>
+                <p className="text-lg">{item.content}</p>
+              </div>
             </div>
           </div>
         </div>
