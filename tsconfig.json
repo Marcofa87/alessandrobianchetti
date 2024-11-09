@@ -28,7 +28,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "next-intl.config.js"
+    "next-intl.config.js",
+    "app/translate/i18n.ts"
   ],
   "exclude": ["node_modules"]
 }

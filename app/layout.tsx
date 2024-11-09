@@ -1,21 +1,18 @@
+import { appWithTranslation } from "next-i18next";
 import { Metadata } from "next";
-
 import { roboto } from "./ui/fonts";
 import "./styles/globals.css";
 import Navbar from "./ui/navbar/Navbar";
 import Footer from "./ui/footer/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import "@/components/translate/i18n";
 
 export const metadata: Metadata = {
   title: "Alessandro Bianchetti Personal Trainer",
   description: "Alessandro Bianchetti Personal Trainer",
 };
 
-export default async function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className={`${roboto.className} antialiased m-auto`}>
@@ -31,3 +28,5 @@ export default async function RootLayout({
     </html>
   );
 }
+
+export default appWithTranslation(RootLayout);
