@@ -1,4 +1,3 @@
-import { getLocale, getMessages } from "next-intl/server";
 import { Metadata } from "next";
 
 import { roboto } from "./ui/fonts";
