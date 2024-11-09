@@ -36,7 +36,7 @@ export default function Navbar() {
 
       {/* Mobile menu - Dropdown */}
       <div
-        className={`absolute right-0 p-4 shadow-md transition-all duration-300 ease-in-out z-10 ${
+        className={`absolute  right-0 p-4 shadow-md transition-all duration-300 ease-in-out z-10 ${
           isOpen ? "top-full opacity-100" : "top-[-200%] opacity-0"
         } md:hidden`}
       >
