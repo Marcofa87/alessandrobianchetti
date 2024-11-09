@@ -14,7 +14,7 @@ export default function MobileNavLinks() {
           Struttura
         </Link>
       </li>
-      <li>
+      <li className="z-40">
         <Link
           href="/contacts"
           className="block hover:text-accent transition-colors duration-200"

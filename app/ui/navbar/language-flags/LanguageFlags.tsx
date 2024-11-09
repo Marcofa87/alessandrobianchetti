@@ -1,14 +1,14 @@
 import Image from "next/image";
 import englishFlag from "@/components/public/united-kingdom.png";
 import italianFlag from "@/components/public/italy.png";
-import { useLanguage } from "@/components/context/LanguageContext";
+import useToggle from "@/components/hooks/useToggle";
 
 export default function LanguageFlags() {
-  const { locale, toggleLocale } = useLanguage();
+  const { isOpen, toggleMenu } = useToggle();
   return (
     <div className="absolute left-1/2 transform -translate-x-1/2 flex space-x-4">
-      <button onClick={toggleLocale}>
-        {locale === "it" ? (
+      <button onClick={toggleMenu}>
+        {isOpen ? (
           <Image
             src={italianFlag}
             alt="italian flag language"
