@@ -1,4 +1,5 @@
 // app/api/language/route.ts
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { Locale, locales } from "@component/../messages/i18n/config";
@@ -25,8 +26,8 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json({ success: true });
-  } catch (_err) {
-    console.error("Error setting language");
+  } catch (err) {
+    console.error("Error setting language:", err);
     return NextResponse.json(
       {
         success: false,
