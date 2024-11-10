@@ -8,7 +8,6 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { locale } = body as { locale: Locale };
 
-    // Validazione esplicita
     if (!locales.includes(locale)) {
       return NextResponse.json(
         {
@@ -26,13 +25,12 @@ export async function POST(request: Request) {
     });
 
     return NextResponse.json({ success: true });
-  } catch (err) {
-    console.error("Error setting language:", err);
+  } catch (_err) {
+    console.error("Error setting language");
     return NextResponse.json(
       {
         success: false,
         message: "Failed to update language",
-        error: err instanceof Error ? err.message : String(err),
       },
       { status: 500 }
     );
