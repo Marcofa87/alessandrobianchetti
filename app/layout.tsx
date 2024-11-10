@@ -1,5 +1,5 @@
+// app/layout.tsx
 import { Metadata } from "next";
-
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { roboto } from "./ui/fonts";
@@ -8,10 +8,21 @@ import Navbar from "./ui/navbar/Navbar";
 import Footer from "./ui/footer/Footer";
 import { Analytics } from "@vercel/analytics/react";
 import { LanguageProvider } from "./context/LanguageProvider";
-
+import {
+  Locale,
+  locales,
+  defaultLocale,
+} from "@/components/../messages/i18n/config";
 export const metadata: Metadata = {
   title: "Alessandro Bianchetti Personal Trainer",
   description: "Alessandro Bianchetti Personal Trainer",
+};
+
+const validateLocale = (locale: string): Locale => {
+  if (locales.includes(locale as Locale)) {
+    return locale as Locale;
+  }
+  return defaultLocale;
 };
 
 export default async function RootLayout({
@@ -19,10 +30,8 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const locale = await getLocale();
-
-  // Providing all messages to the client
-  // side is the easiest way to get started
+  const rawLocale = await getLocale();
+  const locale = validateLocale(rawLocale);
   const messages = await getMessages();
 
   return (
