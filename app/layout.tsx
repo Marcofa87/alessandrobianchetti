@@ -27,7 +27,7 @@ export default async function RootLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <LanguageProvider>
+      <LanguageProvider initialLocale={locale}>
         <html lang={locale}>
           <body className={`${roboto.className} antialiased m-auto`}>
             <Analytics />
