@@ -1,12 +1,6 @@
 "use client";
-import {
-  createContext,
-  useContext,
-  useState,
-  ReactNode,
-  useEffect,
-} from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { createContext, useContext, useState, ReactNode } from "react";
+import { useRouter } from "next/navigation";
 import { Locale, defaultLocale } from "@/components/../messages/i18n/config";
 
 interface LanguageContextType {
@@ -29,7 +23,6 @@ export const LanguageProvider = ({
   const [locale, setLocaleState] = useState<Locale>(initialLocale);
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
-  const pathname = usePathname();
 
   const setLocale = async (newLocale: Locale) => {
     try {
