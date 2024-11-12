@@ -13,8 +13,8 @@ export default function Logo() {
           src={logo}
           alt="Personal Trainer Logo"
           className="rounded-full"
-          height={70}
-          width={70}
+          height={55}
+          width={55}
         />
       </Link>
     </div>

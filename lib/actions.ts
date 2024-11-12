@@ -23,7 +23,7 @@ export async function sendEmail(data: {
     });
 
     const mailOptions = {
-      from: process.env.SMTP_USER,
+      from: data.email,
       to: process.env.SMTP_USER,
       replyTo: data.email, // Permette di rispondere direttamente al mittente
       subject: data.subject,
@@ -42,7 +42,7 @@ export async function sendEmail(data: {
     console.log("Attempting to send email...");
     await transporter.sendMail(mailOptions);
     console.log("Email sent successfully");
-    console.log(mailOptions);
+    console.log(transporter.sendMail(mailOptions));
 
     return { success: true };
   } catch (error) {
