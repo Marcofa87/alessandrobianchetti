@@ -26,7 +26,8 @@ export default function StructurePageLayout({
             />
           </div>
           <div className="md:w-2/3 ">
-            <p className="px-6 mt-8 mx-auto max-w-96 text-center md:text-left">
+            <h2 className="text-center">{section.title}</h2>
+            <p className="px-6 mt-8 mx-auto max-w-96 text-center ">
               {section.text}
             </p>
           </div>

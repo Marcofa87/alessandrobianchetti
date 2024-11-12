@@ -14,6 +14,7 @@ export interface StructureImage {
 export interface StructureSection {
   id: number;
   image: StructureImage;
+  title: string;
   text: string;
 }
 
@@ -26,6 +27,7 @@ export const structureSections: StructureSection[] = [
       height: 250,
       alt: "Sala pesi moderna e attrezzata",
     },
+    title: "Allenamento isotonico",
     text: "Nella parte di sala pesi tutto è strutturato per aumentare, migliorare, rinforzare e ultimo, ma non per ultimo, rassodare la muscolatura. Basta un rack, una panca, manubri e bilanciere per poter arrivare, con costanza, a ottimi risultati.",
   },
   {
@@ -36,6 +38,7 @@ export const structureSections: StructureSection[] = [
       height: 250,
       alt: "Area cardio con tapis roulant e cyclette",
     },
+    title: "Allenamento funzionale",
     text: "Per aumentare l'attività cardiaca e il metabolismo. La presenza di kettlebell di varie misure, di corde e di palle mediche più altri , diabolici ma funzionali attrezzi, si possono combinare tra loro per aumentare le proprie performance e per sfogarsi dopo una lunga giornata di lavoro.",
   },
   {
@@ -46,6 +49,7 @@ export const structureSections: StructureSection[] = [
       height: 250,
       alt: "Posturale",
     },
+    title: "Posturale",
     text: "Per aumentare la flessibilità , e migliorare la postura.",
   },
   {
@@ -56,6 +60,7 @@ export const structureSections: StructureSection[] = [
       height: 250,
       alt: "Zona pesi liberi e attrezzature",
     },
+    title: "Visita Posturale",
     text: "Con la presenza di un lettino e di un filo a piombo si può fare una completa analisi posturale per analizzare, trovare e cercare di risolvere squilibri della nostra postura.",
   },
 ];
