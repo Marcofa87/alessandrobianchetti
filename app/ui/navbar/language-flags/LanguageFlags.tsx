@@ -19,8 +19,8 @@ export default function LanguageFlags() {
           alt={
             locale === "en" ? "english flag language" : "italian flag language"
           }
-          width={24}
-          height={24}
+          width={28}
+          height={28}
         />
       </button>
     </div>

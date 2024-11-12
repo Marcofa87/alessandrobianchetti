@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import gymMainImage from "@/components/public/victor-freitas-WvDYdXDzkhs-unsplash.jpg";
+import gymMainImage from "@/components/public/pexels-victorfreitas-841130.jpg";
 import MapLocation from "@/components/ui/locationmap/MapLocation";
 import Accordion from "@/components/ui/accordion/Accordion";
 import { useTranslations } from "next-intl";
@@ -15,7 +15,6 @@ export default function HomePage() {
         <Image
           src={gymMainImage}
           alt="immagine della palestra"
-          width={500}
           className="m-auto w-full h-64 opacity-50"
         />
         <h1 className="absolute inset-0 top-20 text-center  md:text-5xl font-bold">

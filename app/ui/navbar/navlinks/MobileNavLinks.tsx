@@ -8,7 +8,7 @@ export default function MobileNavLinks() {
       <li>
         <Link
           href="/structure"
-          className="block hover:text-accent transition-colors duration-200"
+          className="block hover:text-accent transition-colors duration-200 font-bold"
           onClick={toggleMenu}
         >
           Struttura
@@ -17,7 +17,7 @@ export default function MobileNavLinks() {
       <li className="z-40">
         <Link
           href="/contacts"
-          className="block hover:text-accent transition-colors duration-200"
+          className="block hover:text-accent transition-colors duration-200 font-bold"
           onClick={toggleMenu}
         >
           Contatti
