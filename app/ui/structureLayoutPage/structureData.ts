@@ -26,7 +26,7 @@ export const structureSections: StructureSection[] = [
       height: 250,
       alt: "Sala pesi moderna e attrezzata",
     },
-    text: "La nostra sala pesi è dotata delle più moderne attrezzature Technogym, progettate per garantire un allenamento efficace e sicuro. Con oltre 200mq di spazio dedicato, offriamo una vasta gamma di macchine isotoniche, pesi liberi e aree per l'allenamento funzionale.",
+    text: "Nella parte di sala pesi tutto è strutturato per aumentare, migliorare, rinforzare e ultimo, ma non per ultimo, rassodare la muscolatura. Basta un rack, una panca, manubri e bilanciere per poter arrivare, con costanza, a ottimi risultati.",
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ export const structureSections: StructureSection[] = [
       height: 250,
       alt: "Area cardio con tapis roulant e cyclette",
     },
-    text: "L'area cardio è equipaggiata con tapis roulant di ultima generazione, cyclette, ellittiche e vogatori. Ogni postazione è dotata di schermo personale per rendere l'allenamento più piacevole e monitorare in tempo reale i propri progressi.",
+    text: "Per aumentare l'attività cardiaca e il metabolismo. La presenza di kettlebell di varie misure, di corde e di palle mediche più altri , diabolici ma funzionali attrezzi, si possono combinare tra loro per aumentare le proprie performance e per sfogarsi dopo una lunga giornata di lavoro.",
   },
   {
     id: 3,
@@ -44,9 +44,9 @@ export const structureSections: StructureSection[] = [
       src: gym3,
       width: 350,
       height: 250,
-      alt: "Sala corsi spaziosa e luminosa",
+      alt: "Posturale",
     },
-    text: "La nostra sala corsi di 150mq ospita una varietà di attività di gruppo, dallo yoga al pilates, dal functional training allo zumba. Il pavimento ammortizzante e gli specchi a parete creano l'ambiente ideale per ogni tipo di lezione.",
+    text: "Per aumentare la flessibilità , e migliorare la postura.",
   },
   {
     id: 4,
@@ -56,6 +56,6 @@ export const structureSections: StructureSection[] = [
       height: 250,
       alt: "Zona pesi liberi e attrezzature",
     },
-    text: "La nostra zona pesi liberi è completa di tutto il necessario per un allenamento intenso e efficace. Manubri, bilancieri e rack professionali sono a disposizione per soddisfare le esigenze di ogni atleta.",
+    text: "Con la presenza di un lettino e di un filo a piombo si può fare una completa analisi posturale per analizzare, trovare e cercare di risolvere squilibri della nostra postura.",
   },
 ];

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/components/public/danielle-cerullo-CQfNt66ttZM-unsplash.jpg";
+import logo from "@/components/public/kamehouselogo.jpeg";
 export default function Logo() {
   return (
     <div className="logo">
@@ -13,8 +13,8 @@ export default function Logo() {
           src={logo}
           alt="Personal Trainer Logo"
           className="rounded-full"
-          height={60}
-          width={60}
+          height={70}
+          width={70}
         />
       </Link>
     </div>
