@@ -15,7 +15,7 @@ export default function HomePage() {
         <Image
           src={gymMainImage}
           alt="immagine della palestra"
-          className="m-auto w-full h-64 opacity-50"
+          className="m-auto h-4/6  opacity-50"
         />
         <h1 className="absolute inset-0 top-20 text-center  md:text-5xl font-bold">
           {t("title")}
