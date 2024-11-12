@@ -28,7 +28,7 @@ export async function sendEmail(data: {
       replyTo: data.email, // Permette di rispondere direttamente al mittente
       subject: data.subject,
       html: `
-      <h1>Hai ricevuto un nuovo messaggio di contatto</h1>
+      <h2>Nuovo messaggio</h2>
       <p><strong>Nome:</strong> ${data.name}</p>
       <p><strong>Telefono:</strong> ${data.phone}</p>
       <p><strong>Email:</strong> ${data.email}</p>
@@ -37,10 +37,13 @@ export async function sendEmail(data: {
       <p>${data.message}</p>
     `,
     };
+    console.log(mailOptions);
 
     console.log("Attempting to send email...");
     await transporter.sendMail(mailOptions);
     console.log("Email sent successfully");
+    console.log(mailOptions);
+
     return { success: true };
   } catch (error) {
     console.error("Error sending email:", error);
