@@ -1,6 +1,6 @@
-import gym1 from "@/components/public/meghan-holmes-wy_L8W0zcpI-unsplash.jpg";
-import gym2 from "@/components/public/scott-webb-U5kQvbQWoG0-unsplash.jpg";
-import gym3 from "@/components/public/samuel-girven-CeJuNGDjHAM-unsplash.jpg";
+import functional from "@/components/public/funzionale.jpg";
+import isotonic from "@/components/public/isotonico.jpg";
+import postural from "@/components/public/posturale.jpg";
 import gym4 from "@/components/public/victor-freitas-WvDYdXDzkhs-unsplash.jpg";
 import { StaticImageData } from "next/image";
 import { useTranslations } from "next-intl";
@@ -25,7 +25,7 @@ export const useStructureData = () => {
     {
       id: 1,
       image: {
-        src: gym1,
+        src: functional,
         width: 350,
         height: 250,
         alt: "Sala pesi moderna e attrezzata",
@@ -36,7 +36,7 @@ export const useStructureData = () => {
     {
       id: 2,
       image: {
-        src: gym2,
+        src: isotonic,
         width: 350,
         height: 250,
         alt: "Area cardio con tapis roulant e cyclette",
@@ -47,7 +47,7 @@ export const useStructureData = () => {
     {
       id: 3,
       image: {
-        src: gym3,
+        src: postural,
         width: 350,
         height: 250,
         alt: "Posturale",
