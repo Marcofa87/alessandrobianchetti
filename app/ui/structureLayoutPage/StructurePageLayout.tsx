@@ -1,4 +1,3 @@
-// components/StructurePageLayout.tsx
 import Image from "next/image";
 import { StructureSection, useStructureData } from "./structureData";
 

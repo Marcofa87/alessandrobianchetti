@@ -4,8 +4,9 @@ import gym3 from "@/components/public/samuel-girven-CeJuNGDjHAM-unsplash.jpg";
 import gym4 from "@/components/public/victor-freitas-WvDYdXDzkhs-unsplash.jpg";
 import { StaticImageData } from "next/image";
 import { useTranslations } from "next-intl";
+
 export interface StructureImage {
-  src: StaticImageData; // Cambiato da string a StaticImageData
+  src: StaticImageData;
   width: number;
   height: number;
   alt: string;
