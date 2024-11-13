@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { sendEmail } from "@/../lib/actions";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 interface FormData {
   name: string;
@@ -14,6 +15,7 @@ interface FormData {
 }
 
 export default function ContactForm() {
+  const t = useTranslations("ContactForm");
   const router = useRouter();
   const {
     register,
@@ -49,7 +51,7 @@ export default function ContactForm() {
 
   return (
     <div className="w-full max-w-2xl mx-auto p-6">
-      <h2 className="text-center mb-8">Contattami subito!</h2>
+      <h2 className="text-center mb-8">{t("cta")}</h2>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="space-y-4 max-w-md mx-auto rounded-xl bg-stone-100 p-6"
@@ -59,7 +61,7 @@ export default function ContactForm() {
             htmlFor="name"
             className="block font-semibold  text-[var(--color)]"
           >
-            Name
+            {t("name")}
           </label>
           <input
             {...register("name", { required: "Name is required" })}
@@ -83,7 +85,7 @@ export default function ContactForm() {
             htmlFor="number"
             className="block font-semibold text-[var(--color)] "
           >
-            Number
+            {t("number")}
           </label>
           <input
             {...register("phone", {
@@ -112,7 +114,7 @@ export default function ContactForm() {
             htmlFor="email"
             className="block font-semibold text-[var(--color)]"
           >
-            Email
+            {t("email")}
           </label>
           <input
             {...register("email", {
@@ -140,7 +142,7 @@ export default function ContactForm() {
             htmlFor="subject"
             className="block font-semibold  text-[var(--color)]"
           >
-            Subject
+            {t("subject")}
           </label>
           <input
             {...register("subject", { required: "Subject is required" })}
@@ -162,7 +164,7 @@ export default function ContactForm() {
             htmlFor="message"
             className="block font-semibold  text-[var(--color)] "
           >
-            Message
+            {t("message")}
           </label>
           <textarea
             {...register("message", { required: "Message is required" })}
@@ -184,7 +186,7 @@ export default function ContactForm() {
           disabled={isSubmitting}
           className="w-full px-4 py-2 bg-[var(--tertiary-color)] text-[var(--text-color)] font-bold text-xl rounded-md hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[var(--tertiary-color)] focus:ring-offset-2"
         >
-          {isSubmitting ? "Sending..." : "Send Message"}
+          {isSubmitting ? t("submitting") : t("submit")}
         </button>
 
         {submitStatus === "error" && (

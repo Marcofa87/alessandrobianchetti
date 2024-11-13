@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { accordionData } from "@/components/ui/navbar/accordionData";
+import { useAccordionData } from "./accordionData";
 import { Plus, Minus } from "lucide-react";
 
 export default function Accordion() {
   const [openItems, setOpenItems] = useState<number[]>([0]);
-
+  const accordionData = useAccordionData();
   const toggleItem = (index: number) => {
     setOpenItems(
       (prevOpenItems) =>

@@ -1,5 +1,59 @@
 {
   "HomePage": {
-    "title": "Alessandro Bianchetti Personal Trainer"
+    "title": "Alessandro Bianchetti Personal Trainer",
+    "accordion": [
+      {
+        "title": "La mia storia",
+        "content": "Ciao sono Alessandro, romano de Roma, classe 1984, dal 2013 sono personal trainer e dal 2024 anche posturologo. \nI miei allenamenti fanno riferimento soprattutto al sollevamento pesi, alla riattivazione e alla tonicità muscolare, infine allenamento funzionale e tabata. \nCon i miei recenti studi in posturologia, ho appreso l'importanza di una corretta postura e quanto le irregolarità posturali possano incidere sulla performance sportiva integrando ed integrandoli nelle mie sessioni ho potuto notare dei veri risultati.\nIl mio obiettivo è il miglioramento estetico,la tonificazione e aumento della massa muscolare integrando una corretta postura ,un miglioramento della resa sportiva e dell'elasticità muscolare attraverso dei protocolli strutturati e modellati su ciascun individuo."
+      },
+      {
+        "title": "Formazione",
+        "content": "Mi laureo in scienze motorie e sportive allo IUSM di Roma nell'anno 2013. Nel 2015 conseguo la laurea in economia e management dello sport sempre nella sede accademica. Nel 2024 mi diplomo come professionista nel campo della posturologia alla scuola Educam di Roma."
+      },
+      {
+        "title": "Lavoro/Servizi",
+        "content": "Nel mio studio presente nel cuore del pigneto oltre che di una sala pesi di 21mq attrezzata per le diverse attività, è presente uno spogliatoio e una doccia a disposizione dei clienti. Un punto relax con caffettiera e bollitore per eventuali the e tisane nei periodi freddi dell'anno."
+      }
+    ],
+    "mapLocation": "Mi trovi in zona Pigneto!"
+  },
+  "Structure": {
+    "services": [
+      {
+        "title": "Allenamento isotonico",
+        "content": "Nella parte di sala pesi tutto è strutturato per aumentare, migliorare, rinforzare e ultimo, ma non per ultimo, rassodare la muscolatura. Basta un rack, una panca, manubri e bilanciere per poter arrivare, con costanza, a ottimi risultati."
+      },
+      {
+        "title": "Allenamento funzionale",
+        "content": "Per aumentare l'attività cardiaca e il metabolismo. La presenza di kettlebell di varie misure, di corde e di palle mediche più altri , diabolici ma funzionali attrezzi, si possono combinare tra loro per aumentare le proprie performance e per sfogarsi dopo una lunga giornata di lavoro."
+      },
+      {
+        "title": "Posturale",
+        "content": "Per aumentare la flessibilità, e migliorare la postura."
+      },
+      {
+        "title": "Visita Posturale",
+        "content": "Con la presenza di un lettino e di un filo a piombo si può fare una completa analisi posturale per analizzare, trovare e cercare di risolvere squilibri della nostra postura."
+      }
+    ]
+  },
+  "ContactForm": {
+    "cta": "Contattami subito!",
+    "name": "Nome",
+    "number": "Numero",
+    "email": "Email",
+    "subject": "Oggetto",
+    "message": "Messaggio",
+    "submitting": "Invio...",
+    "submit": "Invia Messaggio"
+  },
+  "ContactPage": {
+    "phone": "Numero di telefono",
+    "email": "Indirizzo Email",
+    "address": "Indirizzo"
+  },
+  "Links": {
+    "structure": "Struttura",
+    "contacts": "Contatti"
   }
 }
