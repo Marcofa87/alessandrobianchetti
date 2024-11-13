@@ -1,6 +1,6 @@
-import functional from "@/components/public/funzionale.jpg";
-import isotonic from "@/components/public/isotonico.jpg";
-import postural from "@/components/public/posturale.jpg";
+import functional from "@/components/public/funzionale.png";
+import isotonic from "@/components/public/isotonico.png";
+import postural from "@/components/public/posturale.png";
 import gym4 from "@/components/public/victor-freitas-WvDYdXDzkhs-unsplash.jpg";
 import { StaticImageData } from "next/image";
 import { useTranslations } from "next-intl";
@@ -25,10 +25,10 @@ export const useStructureData = () => {
     {
       id: 1,
       image: {
-        src: functional,
-        width: 350,
+        src: isotonic,
+        width: 500,
         height: 250,
-        alt: "Sala pesi moderna e attrezzata",
+        alt: "Pesi per allenamento funzionale",
       },
       title: t("services.0.title"),
       content: t("services.0.content"),
@@ -36,10 +36,10 @@ export const useStructureData = () => {
     {
       id: 2,
       image: {
-        src: isotonic,
-        width: 350,
+        src: functional,
+        width: 500,
         height: 250,
-        alt: "Area cardio con tapis roulant e cyclette",
+        alt: "Pesi per allenamento isotonico ",
       },
       title: t("services.1.title"),
       content: t("services.1.content"),
@@ -48,9 +48,9 @@ export const useStructureData = () => {
       id: 3,
       image: {
         src: postural,
-        width: 350,
+        width: 500,
         height: 250,
-        alt: "Posturale",
+        alt: "attrezzatura per posturale",
       },
       title: t("services.2.title"),
       content: t("services.2.content"),
@@ -59,9 +59,9 @@ export const useStructureData = () => {
       id: 4,
       image: {
         src: gym4,
-        width: 350,
+        width: 500,
         height: 250,
-        alt: "Zona pesi liberi e attrezzature",
+        alt: "visita posturale",
       },
       title: t("services.3.title"),
       content: t("services.3.content"),
