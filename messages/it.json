@@ -55,5 +55,15 @@
   "Links": {
     "structure": "Struttura",
     "contacts": "Contatti"
+  },
+  "NotFound": {
+    "error": "404 - Pagina non trovata",
+    "content": "Oops! Se non trovi la pagina desiderata è perchè anche lei è sicuramente in Palestra!",
+    "home": "Torna alla home"
+  },
+  "SuccessSubmission": {
+    "success": "Successo!",
+    "formsubmission": "Il tuo form è stato inviato con successo. Verrai contattato il prima possibile",
+    "home": "Torna alla home"
   }
 }

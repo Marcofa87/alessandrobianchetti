@@ -1,8 +1,69 @@
 {
   "HomePage": {
     "title": "Alessandro Bianchetti Personal Trainer",
-    "Accordion": {
-      "story": "Alessandro Bianchetti Personal Trainer"
-    }
+    "accordion": [
+      {
+        "title": "My Story",
+        "content": "Hello, I'm Alessandro, from Rome, born in 1984. I've been a personal trainer since 2013 and since 2024 also a posture specialist.\nMy workouts mainly focus on weightlifting, reactivation and muscle toning, and also functional training and tabata.\nWith my recent studies in posturology, I have learned the importance of correct posture and how postural irregularities can affect sports performance. By integrating and incorporating them into my sessions, I have been able to see real results.\nMy goal is aesthetic improvement, toning and increasing muscle mass by integrating correct posture, improving sports performance and muscle elasticity through structured and customized protocols for each individual."
+      },
+      {
+        "title": "Education",
+        "content": "I graduated in motor and sports sciences at IUSM in Rome in 2013. In 2015 I obtained a degree in sports economics and management, also at the same university. In 2024 I graduated as a professional in the field of posturology at the Educam school in Rome."
+      },
+      {
+        "title": "Work/Services",
+        "content": "In my studio located in the heart of Pigneto, in addition to a 21 sq.m. weight room equipped for various activities, there is a changing room and a shower available for clients. A relaxation area with a coffee machine and kettle for any teas and herbal teas during the colder seasons."
+      }
+    ],
+    "mapLocation": "You can find me in the Pigneto area!"
+  },
+  "Structure": {
+    "services": [
+      {
+        "title": "Isotonic Training",
+        "content": "In the weight room area, everything is structured to increase, improve, strengthen and last but not least, firm up the musculature. All you need is a rack, a bench, dumbbells and a barbell to achieve excellent results with consistency."
+      },
+      {
+        "title": "Functional Training",
+        "content": "To increase heart rate and metabolism. The presence of various size kettlebells, ropes and medicine balls, along with other diabolical but functional equipment, can be combined to increase one's performance and let off steam after a long workday."
+      },
+      {
+        "title": "Postural Training",
+        "content": "To increase flexibility and improve posture."
+      },
+      {
+        "title": "Postural Examination",
+        "content": "With the presence of a bed and a plumb line, a complete postural analysis can be performed to analyze, find and try to resolve imbalances in our posture."
+      }
+    ]
+  },
+  "ContactForm": {
+    "cta": "Contact me now!",
+    "name": "Name",
+    "number": "Phone Number",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "submitting": "Sending...",
+    "submit": "Submit Message"
+  },
+  "ContactPage": {
+    "phone": "Phone Number",
+    "email": "Email Address",
+    "address": "Address"
+  },
+  "Links": {
+    "structure": "Structure",
+    "contacts": "Contacts"
+  },
+  "NotFound": {
+    "error": "404 - Page Not Found",
+    "content": "Oops! If you can't find the desired page, it's probably because it's in the Gym too!",
+    "home": "Go back to Home"
+  },
+  "SuccessSubmission": {
+    "success": "Success!",
+    "formsubmission": "Your form has been successfully submitted. You will be contacted as soon as possible.",
+    "home": "Go back to Home"
   }
 }
