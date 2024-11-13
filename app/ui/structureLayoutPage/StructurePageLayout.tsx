@@ -5,9 +5,7 @@ export interface StructurePageLayoutProps {
   sections: StructureSection[];
 }
 
-export default function StructurePageLayout({
-  sections,
-}: StructurePageLayoutProps) {
+export default function StructurePageLayout({}: StructurePageLayoutProps) {
   const structureSections = useStructureData();
   return (
     <div className="container mx-auto py-12">
