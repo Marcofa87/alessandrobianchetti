@@ -1,7 +1,7 @@
 import functional from "@/components/public/funzionale.png";
-import isotonic from "@/components/public/isotonico.jpg";
-import postural from "@/components/public/posturale.jpg";
-import gym4 from "@/components/public/victor-freitas-WvDYdXDzkhs-unsplash.jpg";
+import isotonic from "@/components/public/IMG-20241113-WA0012 2.jpg";
+import postural from "@/components/public/2.png";
+import gym4 from "@/components/public/output-onlinetools .png";
 import { StaticImageData } from "next/image";
 import { useTranslations } from "next-intl";
 
@@ -26,7 +26,7 @@ export const useStructureData = () => {
       id: 1,
       image: {
         src: isotonic,
-        width: 500,
+        width: 350,
         height: 250,
         alt: "Pesi per allenamento funzionale",
       },
@@ -37,7 +37,7 @@ export const useStructureData = () => {
       id: 2,
       image: {
         src: functional,
-        width: 500,
+        width: 350,
         height: 250,
         alt: "Pesi per allenamento isotonico ",
       },
@@ -48,7 +48,7 @@ export const useStructureData = () => {
       id: 3,
       image: {
         src: postural,
-        width: 500,
+        width: 350,
         height: 250,
         alt: "attrezzatura per posturale",
       },
@@ -59,7 +59,7 @@ export const useStructureData = () => {
       id: 4,
       image: {
         src: gym4,
-        width: 500,
+        width: 350,
         height: 250,
         alt: "visita posturale",
       },

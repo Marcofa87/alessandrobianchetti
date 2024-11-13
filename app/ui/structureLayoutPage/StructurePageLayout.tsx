@@ -20,7 +20,6 @@ export default function StructurePageLayout({}: StructurePageLayoutProps) {
               alt={section.image.alt}
               width={section.image.width}
               height={section.image.height}
-              layout="responsive"
               className="m-auto p-4 rounded-3xl "
             />
           </div>
