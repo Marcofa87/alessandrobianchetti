@@ -1,6 +1,6 @@
 import functional from "@/components/public/funzionale.png";
-import isotonic from "@/components/public/isotonico.png";
-import postural from "@/components/public/posturale.png";
+import isotonic from "@/components/public/isotonico.jpg";
+import postural from "@/components/public/posturale.jpg";
 import gym4 from "@/components/public/victor-freitas-WvDYdXDzkhs-unsplash.jpg";
 import { StaticImageData } from "next/image";
 import { useTranslations } from "next-intl";
