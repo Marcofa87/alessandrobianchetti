@@ -16,7 +16,30 @@ import {
 
 export const metadata: Metadata = {
   title: "Alessandro Bianchetti Personal Trainer",
-  description: "Alessandro Bianchetti Personal Trainer",
+  description:
+    "Alessandro Bianchetti, personal trainer a Roma specializzato in allenamenti personalizzati, postura e fitness.",
+  keywords: [
+    "personal trainer",
+    "allenamenti personalizzati",
+    "postura",
+    "sollevamento pesi",
+    "Roma",
+    "Pigneto",
+  ],
+  /* openGraph: {
+    title: "Alessandro Bianchetti Personal Trainer",
+    description:
+      "Alessandro Bianchetti, personal trainer a Roma specializzato in allenamenti personalizzati, postura e fitness.",
+    url: "https://alessandrobianchetti.vercel.app/",
+    images: [
+      {
+        url: "https://URL_dell_immagine_di_preview",
+        width: 800,
+        height: 600,
+        alt: "Alessandro Bianchetti Personal Trainer",
+      },
+    ],
+  }, */
 };
 
 const validateLocale = (locale: string): Locale => {
