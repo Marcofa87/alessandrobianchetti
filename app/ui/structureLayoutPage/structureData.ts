@@ -1,14 +1,12 @@
-import functional from "@/components/public/funzionale.png";
-import isotonic from "@/components/public/IMG-20241113-WA0012 2.jpg";
-import postural from "@/components/public/2.png";
-import gym4 from "@/components/public/output-onlinetools .png";
+import functional from "@/components/public/WhatsApp Image 2024-11-14 at 20.24.32.jpeg";
+import isotonic from "@/components/public/funzionale.png";
+import postural from "@/components/public/WhatsApp Image 2024-11-14 at 20.29.25.jpeg";
+import posturalCheck from "@/components/public/WhatsApp Image 2024-11-14 at 20.41.00.jpeg";
 import { StaticImageData } from "next/image";
 import { useTranslations } from "next-intl";
 
 export interface StructureImage {
   src: StaticImageData;
-  width: number;
-  height: number;
   alt: string;
 }
 
@@ -25,9 +23,7 @@ export const useStructureData = () => {
     {
       id: 1,
       image: {
-        src: isotonic,
-        width: 350,
-        height: 250,
+        src: functional,
         alt: "Pesi per allenamento funzionale",
       },
       title: t("services.0.title"),
@@ -36,9 +32,7 @@ export const useStructureData = () => {
     {
       id: 2,
       image: {
-        src: functional,
-        width: 350,
-        height: 250,
+        src: isotonic,
         alt: "Pesi per allenamento isotonico ",
       },
       title: t("services.1.title"),
@@ -48,8 +42,6 @@ export const useStructureData = () => {
       id: 3,
       image: {
         src: postural,
-        width: 350,
-        height: 250,
         alt: "attrezzatura per posturale",
       },
       title: t("services.2.title"),
@@ -58,9 +50,7 @@ export const useStructureData = () => {
     {
       id: 4,
       image: {
-        src: gym4,
-        width: 350,
-        height: 250,
+        src: posturalCheck,
         alt: "visita posturale",
       },
       title: t("services.3.title"),

@@ -18,8 +18,8 @@ export default function StructurePageLayout({}: StructurePageLayoutProps) {
             <Image
               src={section.image.src}
               alt={section.image.alt}
-              width={section.image.width}
-              height={section.image.height}
+              width={500}
+              height={250}
               className="m-auto p-4 rounded-3xl "
             />
           </div>
