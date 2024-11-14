@@ -17,9 +17,8 @@ export default function HomePage() {
         <Image
           src={gymMainImage}
           alt="immagine della palestra"
-          layout="fill" // Riempe il contenitore
-          objectFit="cover" // Adatta l’immagine
-          quality={75} // Riduce la qualità per migliorare la velocità
+          layout="fill"
+          objectFit="cover"
           className="opacity-40"
           loading="lazy"
         />
