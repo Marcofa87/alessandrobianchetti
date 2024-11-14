@@ -33,7 +33,7 @@ export default function Accordion() {
                 <Plus size={22} />
               )}
             </span>
-            <h3 className="m-4 text-xl font-medium w-full flex items-center gap-2">
+            <h3 className="m-4 text-2xl font-bold w-full flex items-center gap-2">
               {item.title}
             </h3>
           </button>
