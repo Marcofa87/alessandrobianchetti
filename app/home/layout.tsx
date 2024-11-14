@@ -21,6 +21,7 @@ export default function HomePage() {
           objectFit="cover" // Adatta l’immagine
           quality={75} // Riduce la qualità per migliorare la velocità
           className="opacity-40"
+          loading="lazy"
         />
         <h1 className="absolute inset-0 top-20 text-center md:text-6xl lg:text-8xl font-black text-balance">
           {t("title")}
