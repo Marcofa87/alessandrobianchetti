@@ -17,7 +17,7 @@ export default function HomePage() {
           alt="immagine della palestra"
           className="m-auto h-96 opacity-40"
         />
-        <h1 className="absolute inset-0 top-20 text-center  md:text-5xl font-bold">
+        <h1 className="absolute inset-0 top-20 text-center md:text-6xl lg:text-8xl font-black text-balance">
           {t("title")}
         </h1>
       </div>
