@@ -5,7 +5,7 @@ export default function ContactPage() {
   const t = useTranslations("ContactPage");
   return (
     <div className="max-w-md mx-auto mt-10 p-6 sm:my-16 bg-stone-100 rounded-xl shadow-md">
-      <h2 className="mb-6 text-[var(--color)]">Info:</h2>
+      <h1 className="mb-6 text-[var(--color)]">Info:</h1>
       <div className="space-y-4">
         <div className="flex items-center">
           <div className="flex-shrink-0 w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">

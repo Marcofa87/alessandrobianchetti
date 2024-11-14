@@ -6,7 +6,7 @@ export default function SuccessSubmit() {
   const t = useTranslations("SuccessSubmission");
   return (
     <div className="flex flex-col items-center mt-28 ">
-      <h2 className=" mb-4">{t("success")}</h2>
+      <h1 className=" mb-4">{t("success")}</h1>
       <p className="text-lg text-center mb-6">{t("formsubmission")}</p>
       <BicepsFlexed className="my-8" size={128} color="#c1292e" />
       <Link href="/" passHref>

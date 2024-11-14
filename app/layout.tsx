@@ -13,6 +13,7 @@ import {
   locales,
   defaultLocale,
 } from "@/components/../messages/i18n/config";
+
 export const metadata: Metadata = {
   title: "Alessandro Bianchetti Personal Trainer",
   description: "Alessandro Bianchetti Personal Trainer",

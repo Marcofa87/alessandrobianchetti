@@ -11,16 +11,22 @@ export default function HomePage() {
   const t = useTranslations("HomePage");
   return (
     <div className="w-full mx-auto space-y-12 relative">
-      <div className="relative">
+      <div className="relative w-full h-96">
+        {" "}
+        {/* Altezza fissa per il contenitore */}
         <Image
           src={gymMainImage}
           alt="immagine della palestra"
-          className="m-auto h-96 opacity-40"
+          layout="fill" // Riempe il contenitore
+          objectFit="cover" // Adatta l’immagine
+          quality={75} // Riduce la qualità per migliorare la velocità
+          className="opacity-40"
         />
         <h1 className="absolute inset-0 top-20 text-center md:text-6xl lg:text-8xl font-black text-balance">
           {t("title")}
         </h1>
       </div>
+
       <Accordion />
       <MapLocation />
     </div>
