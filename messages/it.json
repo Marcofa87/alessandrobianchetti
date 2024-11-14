@@ -18,6 +18,7 @@
     "mapLocation": "Mi trovi in zona Pigneto!"
   },
   "Structure": {
+    "title": "Cosa troverai nella struttura",
     "services": [
       {
         "title": "Allenamento isotonico",

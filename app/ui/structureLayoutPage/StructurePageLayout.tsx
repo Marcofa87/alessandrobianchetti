@@ -1,14 +1,17 @@
 import Image from "next/image";
 import { StructureSection, useStructureData } from "./structureData";
+import { useTranslations } from "next-intl";
 
 export interface StructurePageLayoutProps {
   sections: StructureSection[];
 }
 
 export default function StructurePageLayout({}: StructurePageLayoutProps) {
+  const t = useTranslations("Structure");
   const structureSections = useStructureData();
   return (
     <div className="container mx-auto py-12">
+      <h1 className="pb-24 sm:text-xs text-center">{t("title")}</h1>
       {structureSections.map((section) => (
         <section
           key={section.id}
