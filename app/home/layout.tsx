@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import gymMainImage from "@/components/public/pexels-victorfreitas-841130.jpg";
+import homePageGym from "@/components/public/WhatsApp Image 2024-11-14 at 20.46.59.jpeg";
 import MapLocation from "@/components/ui/locationmap/MapLocation";
 import Accordion from "@/components/ui/accordion/Accordion";
 import { useTranslations } from "next-intl";
@@ -15,7 +15,7 @@ export default function HomePage() {
         {" "}
         {/* Altezza fissa per il contenitore */}
         <Image
-          src={gymMainImage}
+          src={homePageGym}
           alt="immagine della palestra"
           layout="fill"
           objectFit="cover"
