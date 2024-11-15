@@ -39,7 +39,9 @@ export default function StructurePageLayout({}: StructurePageLayoutProps) {
 
             {/* Contenuto */}
             <div className="md:w-2/3">
-              <p className="px-8 mt-8 mx-auto text-center">{section.content}</p>
+              <p className="px-8 mt-8 mx-auto text-center lg:text-xxl">
+                {section.content}
+              </p>
             </div>
           </div>
         </section>
