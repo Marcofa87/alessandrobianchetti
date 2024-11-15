@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import homePageGym from "@/components/public/WhatsApp Image 2024-11-14 at 20.46.59.jpeg";
+import homePageGym from "@/components/public/homeGym.jpeg";
 import MapLocation from "@/components/ui/locationmap/MapLocation";
 import Accordion from "@/components/ui/accordion/Accordion";
 import { useTranslations } from "next-intl";

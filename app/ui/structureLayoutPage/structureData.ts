@@ -1,7 +1,7 @@
-import functional from "@/components/public/WhatsApp Image 2024-11-14 at 20.24.32.jpeg";
-import isotonic from "@/components/public/funzionale.png";
-import postural from "@/components/public/WhatsApp Image 2024-11-14 at 20.29.25.jpeg";
-import posturalCheck from "@/components/public/WhatsApp Image 2024-11-14 at 20.41.00.jpeg";
+import functional from "@/components/public/funzionale.png";
+import isotonic from "@/components/public/isotonico-blur.jpeg";
+import postural from "@/components/public/posturale-blur.jpeg";
+import posturalCheck from "@/components/public/visita-posturale-blur.jpeg";
 import { StaticImageData } from "next/image";
 import { useTranslations } from "next-intl";
 
