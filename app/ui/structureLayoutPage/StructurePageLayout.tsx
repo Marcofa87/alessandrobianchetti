@@ -19,7 +19,7 @@ export default function StructurePageLayout({}: StructurePageLayoutProps) {
           className="p-6 md:flex md:items-center md:even:flex-row-reverse mb-12"
         >
           <div className="md:w-2/3 flex justify-center items-center">
-            <div className="relative w-[500px] h-[250px]">
+            <div className="relative w-[400px] h-[250px]">
               <Image
                 src={section.image.src}
                 alt={section.image.alt}
