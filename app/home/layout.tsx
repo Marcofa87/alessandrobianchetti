@@ -18,7 +18,7 @@ export default function HomePage() {
           layout="fill"
           objectFit="cover"
           className="opacity-40"
-          loading="lazy"
+          loading="eager"
         />
         <h1 className="absolute inset-0 top-20 text-center md:text-6xl lg:text-8xl font-black text-balance">
           {t("title")}
