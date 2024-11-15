@@ -12,8 +12,6 @@ export default function HomePage() {
   return (
     <div className="w-full mx-auto space-y-12 relative">
       <div className="relative w-full h-96">
-        {" "}
-        {/* Altezza fissa per il contenitore */}
         <Image
           src={homePageGym}
           alt="immagine della palestra"
