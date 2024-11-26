@@ -1,5 +1,3 @@
-"use client";
-
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
@@ -16,7 +14,7 @@ export default function MobileNavLinks() {
         <Link
           href="/structure"
           className={`block transition-colors duration-200 font-bold ${
-            pathname === "/structure" ? "underline" : "hover:text-accent"
+            pathname === "/structure" ? "border-b-2" : "hover:text-accent"
           }`}
           onClick={toggleMenu}
         >
@@ -27,7 +25,7 @@ export default function MobileNavLinks() {
         <Link
           href="/contacts"
           className={`block transition-colors duration-200 font-bold ${
-            pathname === "/contacts" ? "underline" : ""
+            pathname === "/contacts" ? "border-b-2" : ""
           }`}
           onClick={toggleMenu}
         >

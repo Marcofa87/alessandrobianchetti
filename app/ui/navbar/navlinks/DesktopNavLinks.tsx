@@ -9,28 +9,23 @@ export default function DesktopNavLinks() {
 
   return (
     <>
-      <ul>
-        <li>
-          <Link
-            href="/structure"
-            className={`hover:text-accent transition-colors duration-200 mr-10 ${
-              pathname === "/structure" ? "active" : ""
-            }`}
-          >
-            {t("structure")}
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/contacts"
-            className={`hover:text-accent transition-colors duration-200 ${
-              pathname === "/contacts" ? "active" : ""
-            }`}
-          >
-            {t("contacts")}
-          </Link>
-        </li>
-      </ul>
+      <Link
+        href="/structure"
+        className={`hover:text-accent transition-colors duration-200 mr-10 ${
+          pathname === "/structure" ? "border-b-2" : ""
+        }`}
+      >
+        {t("structure")}
+      </Link>
+
+      <Link
+        href="/contacts"
+        className={`hover:text-accent transition-colors duration-200 ${
+          pathname === "/contacts" ? "border-b-2" : ""
+        }`}
+      >
+        {t("contacts")}
+      </Link>
     </>
   );
 }
