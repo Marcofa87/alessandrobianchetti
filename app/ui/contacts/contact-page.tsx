@@ -26,7 +26,7 @@ export default function ContactPage() {
           <div className="flex-shrink-0 w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
             <Mail className="text-[var(--color)] w-6 h-6 transition-all duration-300 hover:font-bold" />
           </div>
-          <div className="ml-4">
+          <div className="ml-4 overflow-visible">
             <p className="font-medium text-[var(--color)]">{t("email")}</p>
             <a
               href="mailto:alessandrobianchetti.1984@gmail.com"

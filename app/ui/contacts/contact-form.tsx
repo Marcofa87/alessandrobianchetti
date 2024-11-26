@@ -54,12 +54,12 @@ export default function ContactForm() {
       <h1 className="text-center mb-8">{t("cta")}</h1>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="space-y-4 max-w-md mx-auto rounded-xl bg-stone-100 p-6"
+        className="space-y-4 max-w-md mx-auto rounded-xl p-6"
       >
         <div>
           <label
             htmlFor="name"
-            className="block font-semibold  text-[var(--color)]"
+            className="block font-semibold  text-[var(--backgound)]"
           >
             {t("name")}
           </label>
@@ -83,7 +83,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="number"
-            className="block font-semibold text-[var(--color)] "
+            className="block font-semibold text-[var(--backgound)] "
           >
             {t("number")}
           </label>
@@ -112,7 +112,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="email"
-            className="block font-semibold text-[var(--color)]"
+            className="block font-semibold text-[var(--backgound)]"
           >
             {t("email")}
           </label>
@@ -140,7 +140,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="subject"
-            className="block font-semibold  text-[var(--color)]"
+            className="block font-semibold  text-[var(--backgound)]"
           >
             {t("subject")}
           </label>
@@ -153,7 +153,7 @@ export default function ContactForm() {
             } block w-full rounded-md shadow-sm text-[var(--color)] p-2`}
           />
           {errors.subject && (
-            <p className="mt-1 text-sm text-[var(--tertiary-color)]">
+            <p className="mt-1 text-sm text-[var(--backgound)]">
               {errors.subject.message}
             </p>
           )}
@@ -162,7 +162,7 @@ export default function ContactForm() {
         <div>
           <label
             htmlFor="message"
-            className="block font-semibold  text-[var(--color)] "
+            className="block font-semibold  text-[var(--backgound)] "
           >
             {t("message")}
           </label>
