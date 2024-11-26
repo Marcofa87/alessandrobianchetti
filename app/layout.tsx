@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "Pigneto",
   ],
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    google: "eA2SDSYdUE8Bb6IU6PcBpq4go5S1J2YUl1nCHke1usE",
   },
   /* openGraph: {
     title: "Alessandro Bianchetti Personal Trainer",
