@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     "Roma",
     "Pigneto",
   ],
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+  },
   /* openGraph: {
     title: "Alessandro Bianchetti Personal Trainer",
     description:
