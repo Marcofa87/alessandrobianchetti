@@ -5,7 +5,7 @@ export default function ContactPage() {
   const t = useTranslations("ContactPage");
   return (
     <div className="max-w-md mx-auto mt-10 p-6 sm:my-16 bg-stone-100 rounded-xl shadow-md">
-      <h2 className="mb-6  text-center text-[var(--color)]">Contatti</h2>
+      <h2 className="mb-6 text-center text-[var(--color)]">Contatti</h2>
       <div className="space-y-4">
         <div className="flex items-center">
           <div className="flex-shrink-0 w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
@@ -26,7 +26,7 @@ export default function ContactPage() {
           <div className="flex-shrink-0 w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
             <Mail className="text-[var(--color)] w-6 h-6 transition-all duration-300 hover:font-bold" />
           </div>
-          <div className="ml-4 overflow-visible">
+          <div className="ml-4 ">
             <p className="font-medium text-[var(--color)]">{t("email")}</p>
             <a
               href="mailto:alessandrobianchetti.1984@gmail.com"

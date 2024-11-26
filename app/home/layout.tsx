@@ -20,7 +20,7 @@ export default function HomePage() {
           className="opacity-40"
           loading="eager"
         />
-        <h1 className="absolute inset-0 top-20 text-center font-black text-balance 2xl:w-5/6 m-auto">
+        <h1 className="absolute inset-0 top-28 text-center font-black 2xl:w-5/6 m-auto">
           {t("title")}
         </h1>
       </div>

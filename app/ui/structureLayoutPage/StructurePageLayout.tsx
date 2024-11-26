@@ -12,11 +12,11 @@ export default function StructurePageLayout({}: StructurePageLayoutProps) {
 
   return (
     <div className="container mx-auto py-12">
-      <h1 className="pb-24 text-center">{t("title")}</h1>
+      <h1 className="pb-24 text-center md:text-5xl">{t("title")}</h1>
       {structureSections.map((section, index) => (
         <section key={section.id} className="p-6 mb-12">
           {/* Titolo centrale */}
-          <h2 className="text-center pb-16">{section.title}</h2>
+          <h2 className="text-center md:text-4xl pb-16">{section.title}</h2>
 
           {/* Contenitore immagine e contenuto con flex */}
           <div
