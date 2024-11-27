@@ -1,5 +1,5 @@
 // app/contact/page.tsx
-import ContactForm from "@/components/ui/contacts/contact-form";
+/* import ContactForm from "@/components/ui/contacts/contact-form"; */
 import ContactPage from "@/components/ui/contacts/contact-page";
 import { Metadata } from "next";
 
