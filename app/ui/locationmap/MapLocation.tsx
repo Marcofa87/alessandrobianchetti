@@ -15,7 +15,7 @@ export default function MapLocation() {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           title="Mappa della posizione di Kamehouse Studio a Roma"
-        ></iframe>
+        />
       </div>
     </div>
   );
