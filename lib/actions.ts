@@ -23,7 +23,7 @@ export async function sendEmail(data: {
     });
 
     const mailOptions = {
-      from: data.email,
+      from: process.env.SMTP_USER,
       to: process.env.SMTP_USER,
       replyTo: data.email, // Permette di rispondere direttamente al mittente
       subject: data.subject,
