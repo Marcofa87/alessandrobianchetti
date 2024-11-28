@@ -14,7 +14,7 @@ export default function HomePage() {
       <div className="relative w-full h-96">
         <Image
           src={homePageGym}
-          alt="immagine della palestra"
+          alt="immagine della palestra kamehouse"
           layout="fill"
           objectFit="cover"
           className="opacity-40"

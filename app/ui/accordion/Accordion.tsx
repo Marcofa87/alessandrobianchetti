@@ -33,9 +33,9 @@ export default function Accordion() {
                 <Plus size={22} />
               )}
             </span>
-            <h3 className="m-4 text-2xl font-bold w-full flex items-center gap-2">
+            <h2 className="m-4 text-2xl font-bold w-full flex items-center gap-2">
               {item.title}
-            </h3>
+            </h2>
           </button>
           <div
             className={`transition-all duration-300 ease-in-out ${
