@@ -13,6 +13,7 @@ import {
   locales,
   defaultLocale,
 } from "@/components/../messages/i18n/config";
+import GoogleAnalytics from "./analytics/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: "Alessandro Bianchetti Personal Trainer",
@@ -67,6 +68,7 @@ export default async function RootLayout({
       <LanguageProvider initialLocale={locale}>
         <html lang={locale}>
           <body className={`${roboto.className} antialiased m-auto`}>
+            <GoogleAnalytics />
             <Analytics />
             <header>
               <nav>
