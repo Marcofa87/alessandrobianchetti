@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import homePageGym from "@/components/public/homeGym.jpeg";
+import homePageGym from "@/components/public/homeGym.webp";
 import MapLocation from "@/components/ui/locationmap/MapLocation";
 import Accordion from "@/components/ui/accordion/Accordion";
 import { useTranslations } from "next-intl";
