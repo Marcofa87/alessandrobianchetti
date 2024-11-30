@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 
-export default function async MapLocation() {
+export default function MapLocation() {
   const t = useTranslations("HomePage");
   return (
     <div className="p-8 md:w-3/4 lg:w-3/6 m-auto">
