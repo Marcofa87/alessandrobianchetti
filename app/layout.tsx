@@ -21,11 +21,13 @@ export const metadata: Metadata = {
     "Alessandro Bianchetti, personal trainer a Roma , postura e fitness.",
   keywords: [
     "personal trainer",
+    "palestra pigneto",
+    "allenamento funzionale",
     "allenamenti personalizzati",
     "postura",
     "visita posturale",
     "sollevamento pesi",
-    "Roma",
+    "palestre roma",
     "Pigneto",
   ],
   verification: {
