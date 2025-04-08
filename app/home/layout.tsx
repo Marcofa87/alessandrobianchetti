@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import alessandro from "@/components/public/7b374c55-9627-4add-a25a-261f1d4442ef_large.jpg";
 
 import homePageGym from "@/components/public/homeGym.webp";
 const MapLocation = dynamic(
@@ -28,7 +29,14 @@ export default function HomePage() {
           {t("title")}
         </h1>
       </div>
-
+      <Image
+        src={alessandro}
+        alt="foto di Alessandro Bianchetti personal trainer"
+        height={300}
+        width={300}
+        loading="lazy"
+        className="rounded-2xl  m-auto border-8 border-[var(--background)]"
+      />
       <Accordion />
       <MapLocation />
     </div>

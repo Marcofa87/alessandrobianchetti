@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     "allenamento isotonico",
     "allenamento funzionale",
     "posturale Roma",
+    "allenamento personalizzato",
+    "allenamento a Roma",
+    "personal trainer Roma",
   ],
   /* openGraph: {
     title: "Servizi di Allenamento - Alessandro Bianchetti",
