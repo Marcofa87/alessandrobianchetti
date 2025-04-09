@@ -17,7 +17,6 @@ function Cta() {
       <a
         href="https://www.miodottore.it/alessandro-bianchetti/chinesiologo-posturologo/roma"
         target="_blank"
-        rel="noopener noreferrer"
         className="px-4 py-3 bg-[var(--tertiary-color)] rounded-xl hover:bg-red-800 transition font-bold w-60 text-center text-2xl cursor-pointer"
       >
         {t("cta")}
