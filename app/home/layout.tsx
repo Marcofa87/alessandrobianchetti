@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import alessandro from "@/components/public/7b374c55-9627-4add-a25a-261f1d4442ef_large.jpg";
 
 import homePageGym from "@/components/public/homeGym.webp";
 const MapLocation = dynamic(
@@ -10,6 +9,7 @@ const MapLocation = dynamic(
 import Accordion from "@/components/ui/accordion/Accordion";
 import { useTranslations } from "next-intl";
 import dynamic from "next/dynamic";
+import Cta from "../ui/cta/cta";
 
 export default function HomePage() {
   const t = useTranslations("HomePage");
@@ -30,25 +30,7 @@ export default function HomePage() {
         </h1>
       </div>
       <Accordion />
-      <div className="flex flex-col items-center justify-center space-y-4 py-3">
-        <Image
-          src={alessandro}
-          alt="foto di Alessandro Bianchetti personal trainer"
-          height={300}
-          width={300}
-          loading="lazy"
-          className="rounded-2xl m-auto opacity-70 mb-6"
-        />
-        <a
-          href="https://www.miodottore.it/alessandro-bianchetti/chinesiologo-posturologo/roma"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-3 bg-[var(--tertiary-color)] rounded-xl hover:bg-red-800 transition font-bold w-60 text-center text-2xl cursor-pointer"
-        >
-          {t("cta")}
-        </a>
-      </div>
-
+      <Cta />
       <MapLocation />
     </div>
   );
