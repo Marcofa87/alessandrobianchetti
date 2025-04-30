@@ -6,14 +6,14 @@ import { roboto } from "./ui/fonts";
 import "./styles/globals.css";
 import Navbar from "./ui/navbar/Navbar";
 import Footer from "./ui/footer/Footer";
-import { Analytics } from "@vercel/analytics/react";
+/* import { Analytics } from "@vercel/analytics/react"; */
 import { LanguageProvider } from "./context/LanguageProvider";
 import {
   Locale,
   locales,
   defaultLocale,
 } from "@/components/../messages/i18n/config";
-import GoogleAnalytics from "./analytics/GoogleAnalytics";
+/* import GoogleAnalytics from "./analytics/GoogleAnalytics"; */
 
 export const metadata: Metadata = {
   title: "Alessandro Bianchetti Personal Trainer",
@@ -71,7 +71,7 @@ export default async function RootLayout({
         <html lang={locale}>
           <body className={`${roboto.className} antialiased m-auto`}>
             {/* <GoogleAnalytics /> */}
-            <Analytics />
+            {/*  <Analytics /> */}
             <header>
               <nav>
                 <Navbar />
