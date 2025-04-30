@@ -70,7 +70,7 @@ export default async function RootLayout({
       <LanguageProvider initialLocale={locale}>
         <html lang={locale}>
           <body className={`${roboto.className} antialiased m-auto`}>
-            <GoogleAnalytics />
+            {/* <GoogleAnalytics /> */}
             <Analytics />
             <header>
               <nav>
